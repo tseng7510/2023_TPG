@@ -1,0 +1,254 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.infoBox {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 1px;
+    top: 140px;
+    width: 30%;
+    display: block;
+    background: $mainColor;
+    @include screen('mobile') {
+      top: 70px;
+    }
+  }
+  .container {
+    max-width: none;
+    width: 100%;
+    max-width: 1640px;
+    padding: 0 0 0 20px;
+    margin: 0 0 0 auto;
+    display: flex;
+    @include screen('mobile') {
+      width: auto;
+      flex-direction: column;
+      max-width: none;
+      padding: 0 20px;
+    }
+  }
+}
+.activeBox {
+  width: 40%;
+  padding: 0 37px 37px 10px;
+  position: relative;
+  background: #fff;
+  isolation: isolate;
+  @include screenWidth('1640') {
+    margin: 0 0 0 -10px;
+  }
+  @include screen('tablet') {
+    width: 50%;
+  }
+  @include screen('mobile') {
+    width: 100%;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 47px;
+    top: 37px;
+    right: 0;
+    bottom: 0;
+    bottom: 0;
+    opacity: 0.8;
+    background: repeating-linear-gradient(-45deg, $secColor, $secColor 2px, transparent 2px, transparent 8px);
+  }
+  .item {
+    overflow: hidden;
+  }
+  .info {
+    position: absolute;
+    inset: 0px 37px 37px 10px;
+    background: linear-gradient(to bottom, rgba(0, 45, 132, 1) 0%, rgba(0, 45, 132, 0.5) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 3.5% 0 3.5% 3.5%;
+    time {
+      display: block;
+      width: 50%;
+      font-size: rem(72);
+      font-weight: 600;
+      color: #fff;
+      padding: 0 20px 10px 0;
+      margin: 0 0 20px;
+      border-bottom: 11px solid $secColor;
+      @include screenWidth('1400') {
+        font-size: rem(66);
+      }
+      @include screenWidth('1200') {
+        width: 60%;
+      }
+      @include screen('tablet') {
+        font-size: rem(60);
+      }
+      @include screen('mobile') {
+        font-size: rem(48);
+      }
+      @include screen('xs_mobile') {
+        font-size: rem(36);
+      }
+    }
+    .description {
+      width: 50%;
+      color: $secColor;
+      font-size: rem(24);
+      flex-grow: 1;
+      overflow: hidden;
+      padding: 0 20px 0 0;
+      @include screenWidth('1200') {
+        width: 60%;
+        font-size: rem(20);
+      }
+      @include screen('mobile') {
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+.otherBox {
+  width: 60%;
+  padding: 70px 0 0 40px;
+  margin: 0 0 0 40px;
+  position: relative;
+  @include screen('tablet') {
+    width: 50%;
+  }
+  @include screen('mobile') {
+    width: auto;
+    padding: 0px 20px;
+    margin: 0 0 0 0px;
+    display: flex;
+    flex-direction: column;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    top: 140px;
+    display: block;
+    background: $mainColor;
+    @include screen('mobile') {
+      top: 90px;
+    }
+  }
+  .controlBox {
+    position: absolute;
+    top: 120px;
+    left: -40px;
+    transform: translateX(-50%);
+    width: 56px;
+    display: flex;
+    justify-content: space-between;
+    @include screen('mobile') {
+      top: auto;
+      left: auto;
+      position: relative;
+      order: -1;
+      margin: -20px auto 0;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      width: 1px;
+      top: 0;
+      bottom: 0;
+      display: block;
+      background: $mainColor;
+    }
+    .slick-arrow {
+      background: none;
+      padding: 0;
+      z-index: 9;
+      &::before {
+        content: '';
+        display: block;
+        mask: url('../images/icon/icon_arrow.svg') center no-repeat;
+        width: 19px;
+        height: 41px;
+        background: $mainColor;
+      }
+      &.slick-prev {
+        left: 0px;
+      }
+      &.slick-next {
+        right: 0px;
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .slick-slide {
+    @include screen('tabletMin') {
+      width: 350px;
+    }
+    & > div {
+      padding: 0 50px 0 0;
+      @include screen('mobile') {
+        padding: 0 50px 0 0;
+      }
+    }
+  }
+  .item {
+    padding: 0 0 0 14px;
+    max-width: 300px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      background: $secColor;
+      left: 0;
+      top: 65px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      height: 65px;
+      width: 1px;
+      background: $secColor;
+    }
+  }
+  time {
+    display: block;
+    color: $mainColor;
+    font-weight: 600;
+    font-size: rem(36);
+    margin: 0 0 40px;
+    height: 50px;
+    display: flex;
+    align-items: flex-end;
+    @include screen('tablet') {
+      font-size: rem(28);
+    }
+    @include screen('mobile') {
+      font-size: rem(20);
+    }
+  }
+  .description {
+    color: #111111;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-size: rem(18);
+    @include screen('mobile') {
+      font-size: rem(16);
+    }
+  }
+}

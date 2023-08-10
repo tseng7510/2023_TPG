@@ -1,0 +1,41 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.html {
+  .content {
+    .container {
+      border-top: 5px solid $mainColor;
+      padding: 5% 20px;
+      background: #eef1f7;
+      @include screen('mobile') {
+        padding: 20px;
+      }
+    }
+    .editor {
+      max-width: 1180px;
+      margin: 0 auto;
+      color: #333333;
+      font-size: rem(16);
+      letter-spacing: 1px;
+      line-height: 1.8;
+      ul.style {
+        li {
+          position: relative;
+          padding: 5px 0 5px 20px;
+          &::before {
+            content: '◆';
+            color: $mainColor;
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .editor {
+    span.title {
+      color: $mainColor;
+      font-weight: 700;
+    }
+  }
+}

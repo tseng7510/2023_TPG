@@ -1,0 +1,1365 @@
+.categoryTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 4%;
+}
+@media screen and (max-width: 1000px) {
+  .categoryTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .categoryTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.categoryList {
+  margin: 0 0 9%;
+}
+@media screen and (max-width: 1000px) {
+  .categoryList {
+    margin: 0 0 60px;
+  }
+}
+.categoryList .listBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media screen and (max-width: 1000px) {
+  .categoryList .listBox .slick-slide {
+    gap: 0;
+  }
+  .categoryList .listBox .slick-slide > div {
+    padding: 0 20px 0 0;
+  }
+}
+.categoryList .listBox .item {
+  width: calc((100% - 45px) / 4);
+  border: 1px solid #dddddd;
+  border-bottom: 1px solid #fdd100;
+  background: none;
+  isolation: isolate;
+  position: relative;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .categoryList .listBox .item .slick-slide > div {
+    padding: 0 10px;
+  }
+}
+.categoryList .listBox .item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 100%;
+  display: block;
+  background: #fdd100;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.categoryList .listBox .item a {
+  display: flex !important;
+  align-items: center;
+  padding: 5px 15px;
+}
+.categoryList .listBox .item .pic {
+  height: 50px;
+  margin: 0 15px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .categoryList .listBox .item .pic {
+    flex-shrink: 0;
+  }
+}
+.categoryList .listBox .item .title {
+  color: #000;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 1000px) {
+  .categoryList .listBox .item .title {
+    font-size: 1rem;
+  }
+}
+.categoryList .listBox .item.active, .categoryList .listBox .item:hover {
+  border-color: #fdd100;
+  border-bottom: #000 1px solid;
+}
+.categoryList .listBox .item.active::before, .categoryList .listBox .item:hover::before {
+  top: 0;
+}
+
+.productsBox .mainBox {
+  padding: 30px 0 0;
+}
+.productsBox .pageContent {
+  padding: 0;
+}
+.productsBox .description {
+  color: #545454;
+  font-size: 1.125rem;
+  max-width: 900px;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 0 0 5%;
+}
+.productsBox .productSearch {
+  transform: translateY(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 0.7;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 9;
+  background: #002e84;
+  padding: 0 20px;
+  max-width: 450px;
+  height: 80px;
+}
+@media screen and (max-width: 1000px) {
+  .productsBox .productSearch {
+    font-size: 1.25rem;
+    height: 60px;
+  }
+}
+.productsBox .productSearch::after {
+  content: "";
+  width: 40px;
+  height: 7px;
+  -webkit-mask: url("../images/icon/icon_more.svg") center no-repeat;
+          mask: url("../images/icon/icon_more.svg") center no-repeat;
+  background: #fdd100;
+  display: block;
+  margin: 0 0 0 15px;
+  transition: all 0.3s ease;
+}
+
+.productsListBox .productInfoBox .description {
+  max-width: 900px;
+  color: #545454;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 300;
+  min-height: 100px;
+}
+.productsListBox .productInfoBox .productSearch {
+  margin: 0;
+  width: 33.3333333333%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: #002e84;
+  border: 1px solid #002e84;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transform: translateY(50%);
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productInfoBox .productSearch {
+    width: 50%;
+    height: 60px;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsListBox .productInfoBox .productSearch {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+}
+.productsListBox .productInfoBox .productSearch::after {
+  content: "";
+  width: 40px;
+  height: 7px;
+  -webkit-mask: url("../images/icon/icon_more.svg") center no-repeat;
+          mask: url("../images/icon/icon_more.svg") center no-repeat;
+  background: #fdd100;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.products {
+  background: #eef1f7;
+  padding: 60px 0 5%;
+}
+@media screen and (max-width: 1000px) {
+  .products {
+    padding: 50px 0;
+  }
+}
+.products .listBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 575px) {
+  .products .listBox {
+    flex-direction: column;
+  }
+}
+.products .listBox .item {
+  width: 33.3333333333%;
+  position: relative;
+  isolation: isolate;
+  border: #dddddd 1px solid;
+  background: #fff;
+  margin: 0 0 -1px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .products .listBox .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .products .listBox .item {
+    width: 100%;
+  }
+}
+.products .listBox .item:nth-child(3n+2) {
+  margin: 0 -1px -1px;
+}
+.products .listBox .item a {
+  display: block;
+  border: 4px solid transparent;
+  padding: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.products .listBox .item:hover {
+  z-index: 9;
+  box-shadow: 0 0 15px 0 rgba(0, 46, 132, 0.5);
+  border-color: #002e84;
+}
+.products .listBox .item:hover a {
+  border-color: #002e84;
+}
+.products .listBox .item:hover .info::after {
+  font-weight: 700;
+  color: #fdd100;
+  background: #002e84;
+}
+.products .listBox .pic {
+  aspect-ratio: 4/2.7;
+  max-width: 300px;
+  margin: 10px auto 40px;
+  z-index: 2;
+}
+.products .listBox .info {
+  width: 100%;
+}
+.products .listBox .info::after {
+  content: "VIEW MORE";
+  display: block;
+  background: #fdd100;
+  font-size: 0.9375rem;
+  text-align: center;
+  padding: 10px 5px 8px;
+  transition: all 0.3s ease;
+}
+.products .listBox .title {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  z-index: 2;
+  margin: 0 0 14px;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .products .listBox .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .products .listBox .title {
+    font-size: 1.25rem;
+  }
+}
+
+.productsListBox .productsInfoTopBox {
+  position: relative;
+}
+.productsListBox .productsInfoTopBox .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.productsListBox .productsInfoTopBox .container .pageTitle {
+  float: left;
+  width: 45%;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .container .pageTitle {
+    width: 100%;
+    float: none;
+  }
+}
+.productsListBox .productsInfoTopBox::before {
+  content: "";
+  position: absolute;
+  inset: 0 48% 0 0;
+  display: block;
+  background: linear-gradient(to bottom, rgba(238, 241, 247, 0) 0%, rgb(238, 241, 247) 100%);
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox::before {
+    inset: 0;
+  }
+}
+.productsListBox .productsInfoTopBox .infoBox .container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .infoBox .container {
+    flex-direction: column;
+  }
+}
+.productsListBox .productsInfoTopBox .productsInfo {
+  width: 45%;
+  padding: 0 0 150px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .productsInfo {
+    padding: 0 0 20px;
+    width: 100%;
+    float: none;
+  }
+}
+.productsListBox .productsInfoTopBox .productsInfo .description {
+  padding: 0 30px 0 0;
+  color: #545454;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .productsInfo .description {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0 0 30px;
+  }
+}
+.productsListBox .productsInfoTopBox .productsInfo .more {
+  width: 230px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdd100;
+  padding: 20px 14px;
+  font-weight: 600;
+  line-height: 1;
+  isolation: isolate;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .productsInfo .more {
+    position: relative;
+    margin: 0 auto;
+    font-size: 1rem;
+  }
+}
+.productsListBox .productsInfoTopBox .productsInfo .more::before {
+  content: "";
+  width: 25px;
+  aspect-ratio: 25/34;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_pdf.svg") center no-repeat;
+          mask: url("../images/icon/icon_pdf.svg") center no-repeat;
+  background: #000;
+  margin: 0 10px 0 0;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .productsInfo .more::before {
+    width: 20px;
+  }
+}
+.productsListBox .productsInfoTopBox .productsInfo .more::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  z-index: -1;
+  background: #002e84;
+  transition: all 0.3s ease;
+}
+.productsListBox .productsInfoTopBox .productsInfo .more:hover {
+  color: #fff;
+}
+.productsListBox .productsInfoTopBox .productsInfo .more:hover::before {
+  background: #fff;
+}
+.productsListBox .productsInfoTopBox .productsInfo .more:hover::after {
+  height: 100%;
+  width: 100%;
+}
+.productsListBox .productsInfoTopBox .productsPic {
+  max-width: 720px;
+  aspect-ratio: 4/2.7;
+  width: 55%;
+  padding: 30px;
+  background: #fff;
+  box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 60px;
+  order: 5;
+  margin: -10% 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .productsListBox .productsInfoTopBox .productsPic {
+    order: 0;
+    position: relative;
+    width: 100%;
+    top: auto;
+    margin: 0 auto 30px;
+    float: none;
+  }
+}
+
+.productsSearchBox .productsInfoBottomBox .container,
+.productsListBox .productsInfoBottomBox .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox .container,
+  .productsListBox .productsInfoBottomBox .container {
+    flex-direction: column;
+  }
+}
+.productsSearchBox .productsInfoBottomBox .sideFilter,
+.productsListBox .productsInfoBottomBox .sideFilter {
+  width: 230px;
+  margin: 0 30px 0 0;
+}
+.productsSearchBox .productsInfoBottomBox aside,
+.productsListBox .productsInfoBottomBox aside {
+  width: 230px;
+  flex-shrink: 0;
+  margin: 62.3px 30px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside,
+  .productsListBox .productsInfoBottomBox aside {
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .sideBox,
+  .productsListBox .productsInfoBottomBox aside .sideBox {
+    top: 75px;
+    position: sticky;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .title,
+.productsListBox .productsInfoBottomBox aside .title {
+  color: #fff;
+  padding: 18px 20px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: #002e84;
+  display: block;
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: unset;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1200px) {
+  .productsSearchBox .productsInfoBottomBox aside .title,
+  .productsListBox .productsInfoBottomBox aside .title {
+    font-size: 1.375rem;
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .title,
+  .productsListBox .productsInfoBottomBox aside .title {
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsInfoBottomBox aside .title,
+  .productsListBox .productsInfoBottomBox aside .title {
+    font-size: 1.25rem;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .title::after,
+.productsListBox .productsInfoBottomBox aside .title::after {
+  content: "";
+  display: block;
+  width: 25px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
+  -webkit-mask: url("../images/icon/icon_filter.svg") center no-repeat;
+          mask: url("../images/icon/icon_filter.svg") center no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  background: #fff;
+}
+@media screen and (max-width: 1200px) {
+  .productsSearchBox .productsInfoBottomBox aside .title::after,
+  .productsListBox .productsInfoBottomBox aside .title::after {
+    margin-left: 20px;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .title.open, .productsSearchBox .productsInfoBottomBox aside .title.active:hover,
+.productsListBox .productsInfoBottomBox aside .title.open,
+.productsListBox .productsInfoBottomBox aside .title.active:hover {
+  background: #002e84;
+}
+@media screen and (min-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .title span,
+  .productsListBox .productsInfoBottomBox aside .title span {
+    display: none;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .item + .item,
+.productsListBox .productsInfoBottomBox aside .item + .item {
+  border-top: 1px solid #dadfe3;
+}
+.productsSearchBox .productsInfoBottomBox aside .item.active .subTitle::after,
+.productsListBox .productsInfoBottomBox aside .item.active .subTitle::after {
+  -webkit-clip-path: polygon(100% 40%, 100% 60%, 50% 60%, 0 60%, 0 40%, 50% 40%);
+          clip-path: polygon(100% 40%, 100% 60%, 50% 60%, 0 60%, 0 40%, 50% 40%);
+}
+.productsSearchBox .productsInfoBottomBox aside .subTitle,
+.productsListBox .productsInfoBottomBox aside .subTitle {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #525252;
+  background: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0 18px;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.productsSearchBox .productsInfoBottomBox aside .subTitle::after,
+.productsListBox .productsInfoBottomBox aside .subTitle::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-clip-path: polygon(100% 40%, 100% 60%, 50% 100%, 0 60%, 0 40%, 50% 80%);
+          clip-path: polygon(100% 40%, 100% 60%, 50% 100%, 0 60%, 0 40%, 50% 80%);
+  background: #8c9fb0;
+  transition: all 0.3s ease;
+}
+.productsSearchBox .productsInfoBottomBox aside .subTitle:hover,
+.productsListBox .productsInfoBottomBox aside .subTitle:hover {
+  color: #002e84;
+}
+.productsSearchBox .productsInfoBottomBox aside .subTitle:hover::after,
+.productsListBox .productsInfoBottomBox aside .subTitle:hover::after {
+  background: #002e84;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox,
+.productsListBox .productsInfoBottomBox aside .contentBox {
+  border: #dddddd 1px solid;
+  padding: 0 15px;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .contentBox,
+  .productsListBox .productsInfoBottomBox aside .contentBox {
+    display: none;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox.open,
+.productsListBox .productsInfoBottomBox aside .contentBox.open {
+  display: block;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox ul,
+.productsListBox .productsInfoBottomBox aside .contentBox ul {
+  border-top: 1px solid #dadfe3;
+  display: none;
+  padding: 15px 0;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox li,
+.productsListBox .productsInfoBottomBox aside .contentBox li {
+  display: flex;
+  position: relative;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox li + li,
+.productsListBox .productsInfoBottomBox aside .contentBox li + li {
+  margin-top: 10px;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox [type=checkbox],
+.productsListBox .productsInfoBottomBox aside .contentBox [type=checkbox] {
+  margin-right: 10px;
+  cursor: pointer;
+  opacity: 0;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox [type=checkbox]:checked + label::before,
+.productsListBox .productsInfoBottomBox aside .contentBox [type=checkbox]:checked + label::before {
+  background-position: center top;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox label,
+.productsListBox .productsInfoBottomBox aside .contentBox label {
+  display: block;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.productsSearchBox .productsInfoBottomBox aside .contentBox label::before,
+.productsListBox .productsInfoBottomBox aside .contentBox label::before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  display: block;
+  background: url("../images/icon/checkbox.png") bottom no-repeat;
+  left: 0px;
+  top: 3px;
+  z-index: 9;
+}
+.productsSearchBox .productsInfoBottomBox .productsFilterList,
+.productsListBox .productsInfoBottomBox .productsFilterList {
+  width: 100%;
+  flex-grow: 1;
+}
+.productsSearchBox .productsInfoBottomBox .productsFilterList table,
+.productsListBox .productsInfoBottomBox .productsFilterList table {
+  width: 100%;
+}
+.productsSearchBox .productsInfoBottomBox .tableBtn,
+.productsListBox .productsInfoBottomBox .tableBtn {
+  font-size: 1.125rem;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #fdd100;
+  display: block;
+  position: relative;
+  max-width: 160px;
+  text-align: center;
+  margin: 10px 0 10px auto;
+  background: #fff;
+  z-index: 9;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox .tableBtn,
+  .productsListBox .productsInfoBottomBox .tableBtn {
+    max-width: none;
+    width: 100%;
+  }
+}
+.productsSearchBox .productsInfoBottomBox .tableBtn:hover,
+.productsListBox .productsInfoBottomBox .tableBtn:hover {
+  background: #fdd100;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox,
+.productsListBox .productsInfoBottomBox .tableBox {
+  overflow-x: auto;
+  position: relative;
+  scrollbar-color: #002e84 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  background: #fff;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox::-webkit-scrollbar,
+.productsListBox .productsInfoBottomBox .tableBox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox::-webkit-scrollbar-thumb,
+.productsListBox .productsInfoBottomBox .tableBox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #002e84;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox::-webkit-scrollbar-track,
+.productsListBox .productsInfoBottomBox .tableBox::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.productsSearchBox .productsInfoBottomBox .tableBox table,
+.productsListBox .productsInfoBottomBox .tableBox table {
+  border: #dddddd 1px solid;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox table thead tr,
+.productsListBox .productsInfoBottomBox .tableBox table thead tr {
+  border: #002e84 1px solid;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox tr,
+.productsListBox .productsInfoBottomBox .tableBox tr {
+  position: relative;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox tr + tr,
+.productsListBox .productsInfoBottomBox .tableBox tr + tr {
+  border-top: #dddddd 1px solid;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox tr:hover,
+.productsListBox .productsInfoBottomBox .tableBox tr:hover {
+  background: #fdd100;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox td,
+.productsSearchBox .productsInfoBottomBox .tableBox th,
+.productsListBox .productsInfoBottomBox .tableBox td,
+.productsListBox .productsInfoBottomBox .tableBox th {
+  text-align: center;
+  padding: 18px 20px 16px;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox td:first-child,
+.productsSearchBox .productsInfoBottomBox .tableBox th:first-child,
+.productsListBox .productsInfoBottomBox .tableBox td:first-child,
+.productsListBox .productsInfoBottomBox .tableBox th:first-child {
+  text-align: left;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox th,
+.productsListBox .productsInfoBottomBox .tableBox th {
+  background: #002e84;
+  color: #fff;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox td:first-child,
+.productsListBox .productsInfoBottomBox .tableBox td:first-child {
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #002e84;
+}
+.productsSearchBox .productsInfoBottomBox .tableBox td a,
+.productsListBox .productsInfoBottomBox .tableBox td a {
+  position: absolute;
+  inset: 0;
+}
+
+.productsDetailBox .mainBox {
+  padding: 30px 0 0px;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .mainBox {
+    padding: 0;
+  }
+}
+.productsDetailBox .productsInfoTopBox {
+  padding: 0 0 4.5%;
+  background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(238, 241, 247) 100%);
+}
+.productsDetailBox .productsInfoTopBox .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.productsDetailBox .productsInfoTopBox .titleBox {
+  margin: 0 0 40px;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoTopBox .titleBox {
+    margin: 0 0 20px;
+  }
+}
+.productsDetailBox .productsInfoTopBox .titleBox .pageTitle {
+  letter-spacing: 0;
+  margin: 0 0 10px;
+}
+.productsDetailBox .productsInfoTopBox .titleBox .subTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #002e84;
+  letter-spacing: 2px;
+}
+.productsDetailBox .productsInfoTopBox .titleBox .pageTitle,
+.productsDetailBox .productsInfoTopBox .titleBox .subTitle {
+  width: 47%;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoTopBox .titleBox .pageTitle,
+  .productsDetailBox .productsInfoTopBox .titleBox .subTitle {
+    width: 100%;
+  }
+}
+.productsDetailBox .productsInfoTopBox .infoBox .container {
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoTopBox .infoBox .container {
+    flex-direction: column;
+  }
+}
+.productsDetailBox .productsInfoTopBox .productsInfo {
+  width: 47%;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoTopBox .productsInfo {
+    padding: 0 0 0px;
+    width: 100%;
+  }
+}
+.productsDetailBox .productsInfoTopBox table {
+  width: 100%;
+  border-top: 1px solid #dddddd;
+}
+.productsDetailBox .productsInfoTopBox table tr {
+  border-bottom: 1px solid #dddddd;
+}
+.productsDetailBox .productsInfoTopBox table th {
+  width: 210px;
+  background: #eef1f7;
+  font-size: 1.125rem;
+  font-weight: normal;
+}
+.productsDetailBox .productsInfoTopBox table th,
+.productsDetailBox .productsInfoTopBox table td {
+  padding: 18px 20px 16px;
+  text-align: left;
+}
+.productsDetailBox .productsInfoTopBox table td {
+  color: #535353;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoTopBox table td {
+    font-size: 1rem;
+  }
+}
+.productsDetailBox .picBox {
+  max-width: 720px;
+  width: 53%;
+  background: #fff;
+  box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 60px;
+  margin: -10% 0 0;
+  order: 5;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .picBox {
+    position: relative;
+    width: 100%;
+    top: auto;
+    margin: 0 auto 30px;
+    order: 0;
+  }
+}
+.productsDetailBox .picBox .bigPic {
+  padding: 30px;
+}
+.productsDetailBox .picBox .bigPic .pic {
+  aspect-ratio: 4/2.7;
+}
+.productsDetailBox .picBox .navPic {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  position: relative;
+}
+.productsDetailBox .picBox .navPic::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background: #eee;
+  right: 10px;
+  left: 10px;
+  top: 0;
+  display: block;
+}
+.productsDetailBox .picBox .navPic * {
+  line-height: 0;
+}
+.productsDetailBox .picBox .navPic .slick-slide > div {
+  padding: 0 6px;
+}
+.productsDetailBox .picBox .navPic .pic {
+  border: 1px solid #dddddd;
+  aspect-ratio: 1;
+}
+.productsDetailBox .picBox .navPic .slick-arrow {
+  background: none;
+  padding: 20px;
+  z-index: 9;
+  flex-shrink: 0;
+}
+.productsDetailBox .picBox .navPic .slick-arrow::before {
+  content: "";
+  display: block;
+  -webkit-mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+          mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+  width: 19px;
+  height: 41px;
+  background: #cccccc;
+  opacity: 0.5;
+}
+.productsDetailBox .picBox .navPic .slick-arrow.slick-prev {
+  left: 10px;
+}
+.productsDetailBox .picBox .navPic .slick-arrow.slick-next {
+  right: 10px;
+}
+.productsDetailBox .picBox .navPic .slick-arrow.slick-next::before {
+  transform: rotate(180deg);
+}
+.productsDetailBox .productBtnBox {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productBtnBox {
+    flex-direction: column;
+  }
+}
+.productsDetailBox .productBtnBox .buttonBox {
+  display: flex;
+  height: 80px;
+  flex-grow: 1;
+  padding: 0 40px 0 0;
+  background: #002e84;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productBtnBox .buttonBox {
+    padding: 0;
+  }
+}
+.productsDetailBox .productBtnBox .buttonBox button {
+  background: #002e84;
+  color: #fdd100;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+}
+.productsDetailBox .productBtnBox .buttonBox button::after {
+  content: "Download";
+  font-size: 1rem;
+  color: #fff;
+  font-weight: normal;
+  display: block;
+  margin: 5px 0 0;
+}
+.productsDetailBox .productBtnBox .buttonBox button + button::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  opacity: 0.2;
+  background: #fff;
+}
+.productsDetailBox .productBtnBox button.inquiryBtn {
+  background: #fdd100;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  font-size: 1.3125rem;
+  font-weight: 700;
+  padding: 0 0 0 20px;
+  margin: -1px -1px -1px -40px;
+  -webkit-clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+          clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productBtnBox button.inquiryBtn {
+    font-size: 1.125rem;
+    width: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
+    margin: 0;
+    padding: 12px 10px 10px;
+  }
+}
+.productsDetailBox .productBtnBox button.inquiryBtn::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  display: block;
+  background: #e50012;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(64px);
+  top: 18px;
+  z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productBtnBox button.inquiryBtn::before {
+    width: 8px;
+    height: 8px;
+    top: 12px;
+    transform: translateX(49px);
+  }
+}
+.productsDetailBox .productBtnBox button.inquiryBtn::after {
+  content: "";
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 0 15px;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_basket.svg") center no-repeat;
+          mask: url("../images/icon/icon_basket.svg") center no-repeat;
+  background: #000;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productBtnBox button.inquiryBtn::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+.productsDetailBox .productsInfoBottomBox {
+  background: #eef1f8;
+}
+.productsDetailBox .productsInfoBottomBox .container {
+  position: relative;
+}
+.productsDetailBox .productsInfoBottomBox .container .content {
+  border-top: 5px solid #002e84;
+}
+.productsDetailBox .productsInfoBottomBox .container .item {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  padding: 5% 0;
+  color: #333333;
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productsInfoBottomBox .container .item {
+    flex-direction: column;
+  }
+}
+.productsDetailBox .productsInfoBottomBox .container .item + .item {
+  border-top: #cdcdcd 1px solid;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .itemTitle {
+  position: sticky;
+  top: 60px;
+  width: 25%;
+  font-size: 2rem;
+  font-weight: 500;
+  min-width: 120px;
+  color: #002e84;
+  letter-spacing: 10px;
+  text-indent: 10px;
+  padding: 0 20px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .itemTitle {
+    font-size: 1.625rem;
+    letter-spacing: 5px;
+    text-indent: 5px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .itemTitle {
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    text-indent: 2px;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px;
+    position: relative;
+    top: 0;
+  }
+}
+.productsDetailBox .productsInfoBottomBox .container .item .infoBox {
+  flex-grow: 1;
+  width: 75%;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .infoBox {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .infoBox {
+    width: 100%;
+    padding: 0;
+  }
+}
+.productsDetailBox .productsInfoBottomBox .container .item li {
+  margin: 0 0 10px;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .feature li {
+  margin: 0 0 20px;
+  padding: 0 0 0 20px;
+  position: relative;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .feature .title {
+  font-size: 1.3125rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-indent: 2px;
+  color: #002e84;
+  margin: 0 0 5px;
+}
+@media screen and (max-width: 1000px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .feature .title {
+    font-size: 1.125rem;
+  }
+}
+.productsDetailBox .productsInfoBottomBox .container .item .feature .title::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 16px;
+  background: #fdd100;
+  display: block;
+  left: 0px;
+  top: 6px;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-color: #002e84 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #002e84;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access .pic {
+  margin: 0 0 10px;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access .title {
+  text-align: center;
+}
+.productsDetailBox .productsInfoBottomBox .container .item .access li {
+  width: calc((100% - 40px) / 5);
+}
+@media screen and (max-width: 767px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .access li {
+    width: calc((100% - 30px) / 4);
+  }
+}
+@media screen and (max-width: 575px) {
+  .productsDetailBox .productsInfoBottomBox .container .item .access li {
+    width: calc((100% - 20px) / 3);
+  }
+}
+
+.productsSearchBox .pageTitle {
+  margin: 0 0 0px;
+}
+.productsSearchBox .productsSearch .subTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 40px;
+  color: #002e84;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .subTitle {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsSearch .subTitle {
+    font-size: 1.125rem;
+    margin: 0 0 20px;
+  }
+}
+.productsSearchBox .productsSearch .searchBoxOut {
+  max-width: 1480px;
+  border-top: 5px solid #002e84;
+  padding: 3% 3%;
+  margin: 20px auto 0;
+}
+.productsSearchBox .productsSearch .searchBox {
+  white-space: nowrap;
+}
+.productsSearchBox .productsSearch .searchBox .title {
+  color: #002e84;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 0;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsSearch .searchBox .title {
+    font-size: 1.125rem;
+  }
+}
+.productsSearchBox .productsSearch .searchBox .title::before {
+  content: "";
+  width: 3px;
+  height: 16px;
+  display: block;
+  margin: 0 15px 0 0;
+  background: #002e84;
+}
+.productsSearchBox .productsSearch .searchBox .formBox {
+  padding: 0;
+  display: flex;
+}
+.productsSearchBox .productsSearch .searchBox .formBox + .title {
+  margin: 5% 0 15px;
+}
+.productsSearchBox .productsSearch .searchBox .formBox .inputItem {
+  padding: 0;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox .inputItem {
+    width: calc(100% - 100px);
+    margin: 0 5px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsSearch .searchBox .formBox .inputItem {
+    width: calc(100% - 80px);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox .select {
+    padding: 0;
+  }
+}
+.productsSearchBox .productsSearch .searchBox .formBox select,
+.productsSearchBox .productsSearch .searchBox .formBox input {
+  height: 60px;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox select,
+  .productsSearchBox .productsSearch .searchBox .formBox input {
+    height: 40px;
+  }
+}
+.productsSearchBox .productsSearch .searchBox .formBox button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 0;
+  background: #002e84;
+  width: 160px;
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox button {
+    font-size: 1.125rem;
+    width: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsSearch .searchBox .formBox button {
+    font-size: 1rem;
+    width: 80px;
+  }
+}
+.productsSearchBox .productsSearch .searchBox .formBox label {
+  flex-grow: 1;
+  margin: 0 30px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox label {
+    width: 100%;
+    margin: 0;
+  }
+  .productsSearchBox .productsSearch .searchBox .formBox label + label {
+    margin: 10px 0 0;
+  }
+}
+.productsSearchBox .productsSearch .searchBox .formBox label span {
+  display: block;
+  margin: 0 10px 0 0;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsSearch .searchBox .formBox label span {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .productsSearchBox .productsSearch .searchBox .formBox label span {
+    font-size: 1rem;
+  }
+}
+.productsSearchBox .tableBox td,
+.productsSearchBox .tableBox th {
+  text-align: center;
+  padding: 18px 20px 16px;
+}
+.productsSearchBox .tableBox td:nth-child(1),
+.productsSearchBox .tableBox th:nth-child(1) {
+  padding: 0;
+  padding: 10px;
+}
+.productsSearchBox .tableBox td:nth-child(1) .pic,
+.productsSearchBox .tableBox th:nth-child(1) .pic {
+  max-width: 100px;
+}
+.productsSearchBox .tableBox td:nth-child(2),
+.productsSearchBox .tableBox th:nth-child(2) {
+  text-align: left;
+}/*# sourceMappingURL=products.css.map */

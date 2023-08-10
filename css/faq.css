@@ -1,0 +1,139 @@
+.faq .listBox .item {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.faq .listBox .item + .item {
+  margin: 20px 0 0;
+}
+.faq .listBox .item.active, .faq .listBox .item:hover {
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+}
+.faq .listBox .item.active .qBox::after, .faq .listBox .item:hover .qBox::after {
+  border: 5px solid #fdd100;
+}
+.faq .listBox .item.active i {
+  width: 25px;
+  height: 25px;
+  right: 40px;
+  top: 40px;
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 80% 50%, 49% 20%, 20% 50%, 0 50%);
+          clip-path: polygon(50% 0%, 100% 50%, 80% 50%, 49% 20%, 20% 50%, 0 50%);
+}
+@media screen and (max-width: 767px) {
+  .faq .listBox .item.active i {
+    top: 24px;
+    right: 20px;
+  }
+}
+.faq .qBox {
+  width: 100%;
+  text-align: left;
+  background: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.3125rem;
+  display: flex;
+  padding: 38px 100px 37px 140px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .faq .qBox {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .faq .qBox {
+    font-size: 1.125rem;
+    padding: 20px 20px 20px 80px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .faq .qBox {
+    padding: 20px 50px 20px 60px;
+    letter-spacing: 1px;
+  }
+}
+.faq .qBox::before {
+  content: "Q";
+  color: #fdd100;
+  font-size: 3.125rem;
+  font-weight: 400;
+  font-weight: normal;
+  position: absolute;
+  left: 0px;
+  top: 12px;
+  bottom: 0;
+  display: block;
+  width: 100px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: #dddddd 1px solid;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .faq .qBox::before {
+    font-size: 2rem;
+    height: 40px;
+    width: 60px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .faq .qBox::before {
+    width: 40px;
+    font-size: 1.625rem;
+    top: 20px;
+    height: auto;
+    bottom: 20px;
+    align-items: self-start;
+  }
+}
+.faq .qBox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #dddddd;
+  transition: all 0.3s ease;
+}
+.faq .qBox i {
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  display: block;
+  border-radius: 100%;
+  background: #002e84;
+  right: 60px;
+  top: 50px;
+  box-shadow: 10px 0 0 0 #002e84, 20px 0 0 0 #002e84;
+}
+@media screen and (max-width: 767px) {
+  .faq .qBox i {
+    top: 30px;
+    right: 40px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .faq .qBox i {
+    right: 30px;
+    box-shadow: 8px 0 0 0 #002e84, 16px 0 0 0 #002e84;
+  }
+}
+.faq .aBox {
+  font-size: 1.125rem;
+  color: #000000;
+  display: none;
+  padding: 30px 40px;
+  background: #fdd100;
+}
+@media screen and (max-width: 767px) {
+  .faq .aBox {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .faq .aBox {
+    padding: 20px 30px;
+  }
+}/*# sourceMappingURL=faq.css.map */

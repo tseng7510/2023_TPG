@@ -1,0 +1,493 @@
+.aboutBox .mainBox {
+  padding: 30px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .aboutBox .mainBox {
+    padding: 0;
+  }
+}
+
+.box1 {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .box1 {
+    flex-direction: column;
+  }
+}
+.box1 > .title {
+  width: 25%;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0 20px 0 0;
+}
+@media screen and (max-width: 1000px) {
+  .box1 > .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box1 > .title {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+}
+.box1 .infoBox {
+  width: 75%;
+}
+@media screen and (max-width: 767px) {
+  .box1 .infoBox {
+    width: 100%;
+  }
+}
+.box1 .infoBox .description {
+  margin: 0;
+  padding: 0;
+  color: #444444;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  margin: 0 0 7%;
+}
+@media screen and (max-width: 767px) {
+  .box1 .infoBox .description {
+    font-size: 1rem;
+  }
+}
+.box1 .infoBox ul {
+  display: flex;
+  flex-grow: 1;
+  margin: 0 0 7%;
+}
+@media screen and (max-width: 767px) {
+  .box1 .infoBox ul {
+    width: 100%;
+  }
+}
+.box1 .infoBox ul li {
+  flex-grow: 1;
+  min-width: 33.3333333333%;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.box1 .infoBox ul li + li {
+  border-left: #dddddd 1px solid;
+}
+.box1 .infoBox ul li i {
+  max-width: 60px;
+  width: 80%;
+  aspect-ratio: 1;
+  display: block;
+  margin: 0 auto 10px;
+  background: #fdd100;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box1 .infoBox ul li i::before {
+  content: "";
+  width: 94%;
+  aspect-ratio: 1;
+  display: block;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  background: #fff;
+}
+.box1 .infoBox ul li .title {
+  text-align: center;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+@media screen and (max-width: 1000px) {
+  .box1 .infoBox ul li .title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box1 .infoBox ul li .title {
+    font-size: 1.125rem;
+  }
+}
+.box1 .infoBox ul li .title .en {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.box1 .infoBox ul li.technology i::before {
+  -webkit-mask-image: url("../images/index/about_icon2.svg");
+          mask-image: url("../images/index/about_icon2.svg");
+}
+.box1 .infoBox ul li.perfection i::before {
+  -webkit-mask-image: url("../images/index/about_icon3.svg");
+          mask-image: url("../images/index/about_icon3.svg");
+}
+.box1 .infoBox ul li.guarantee i::before {
+  -webkit-mask-image: url("../images/index/about_icon4.svg");
+          mask-image: url("../images/index/about_icon4.svg");
+}
+
+.box2 {
+  overflow: hidden;
+}
+@media screen and (min-width: 1000px) {
+  .box2 {
+    padding: 10% 0 0;
+  }
+}
+.box2 .title {
+  text-align: right;
+  color: transparent;
+  font-size: 8vw;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0 0 0 160px;
+  margin: 0 0 -1.5%;
+  width: 100%;
+  -webkit-text-stroke: 1px #002e84;
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 1000px) {
+  .box2 .title {
+    font-size: 6.25rem;
+    padding: 0 10px 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box2 .title {
+    font-size: 3.75rem;
+    margin: 0 0 -30px;
+  }
+}
+.box2 .infoBox {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1000px) {
+  .box2 .infoBox {
+    flex-direction: column;
+  }
+}
+.box2 .picBox {
+  margin: 0 -140px 0 0;
+  position: relative;
+  padding: 4% 0;
+  width: 55%;
+}
+@media screen and (min-width: 1000px) {
+  .box2 .picBox {
+    margin: -12% -140px 0 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .box2 .picBox {
+    padding: 30px 0 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+.box2 .picBox .bg {
+  content: "";
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 2/1.91;
+  background: #fdd100;
+  display: block;
+  top: 0;
+  right: 0;
+}
+.box2 .picBox .pic {
+  display: none;
+}
+.box2 .picBox .pic.active {
+  display: block;
+}
+.box2 .info {
+  width: calc(45% + 140px);
+  background: #002e84;
+  padding: 3%;
+}
+@media screen and (max-width: 1000px) {
+  .box2 .info {
+    width: 100%;
+    margin: -1% 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box2 .info {
+    padding: 40px 20px;
+  }
+}
+.box2 .subTitle {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+@media screen and (max-width: 1000px) {
+  .box2 .subTitle {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box2 .subTitle {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .box2 .subTitle {
+    font-size: 2.25rem;
+  }
+}
+.box2 ul li {
+  padding: 4px 0 4px 20px;
+  position: relative;
+}
+.box2 ul li::before {
+  content: "";
+  width: 3px;
+  height: 16px;
+  background: #fdd100;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 9px;
+}
+@media screen and (max-width: 767px) {
+  .box2 ul li::before {
+    top: 6px;
+  }
+}
+.box2 ul li button {
+  padding: 0;
+  background: none;
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .box2 ul li button {
+    font-size: 1rem;
+  }
+}
+.box2 ul li.active button {
+  color: #fdd100;
+}
+
+.box3 {
+  position: relative;
+  min-height: 30vh;
+  padding: 0 0 50vh;
+}
+@media screen and (max-width: 575px) {
+  .box3 {
+    padding: 0 0 20vh;
+  }
+}
+.box3::before {
+  content: "";
+  position: absolute;
+  background: url("../images/in/about_bg.jpg") center;
+  background-attachment: fixed;
+  display: block;
+  inset: 30% 0 0;
+  display: block;
+}
+.box3 .infoBox {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  top: 0;
+  padding: 8%;
+}
+.box3 .infoBox .info {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.box3 .infoBox .title {
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 5px;
+  text-indent: 5px;
+  margin: 0 0 5%;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 1000px) {
+  .box3 .infoBox .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box3 .infoBox .title {
+    font-size: 1.25rem;
+  }
+}
+.box3 .infoBox .description {
+  font-size: 1.125rem;
+  color: #444444;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 767px) {
+  .box3 .infoBox .description {
+    font-size: 1rem;
+  }
+}
+
+.box4 {
+  background: url("../images/in/about_bg3.jpg") right center no-repeat;
+}
+@media screen and (max-width: 575px) {
+  .box4 {
+    background-position: center bottom;
+    padding: 0 0 100px;
+  }
+}
+.box4 .infoBox {
+  width: 55%;
+  max-width: 1080px;
+  background: #eef1f7;
+  padding: 5%;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (max-width: 575px) {
+  .box4 .infoBox {
+    width: 100%;
+    padding: 40px 20px 100px;
+  }
+}
+.box4 .infoBox::before {
+  content: "";
+  position: absolute;
+  background: url("../images/in/about_bg2.png") left top no-repeat;
+  width: 1329px;
+  height: 768px;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation: rotate3602 160s linear infinite;
+  opacity: 0.6;
+}
+@keyframes rotate3602 {
+  from {
+    transform: translateY(-50%) translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateY(-50%) translateX(-50%) rotate(360deg);
+  }
+}
+.box4 .info {
+  max-width: 590px;
+  margin: 0 auto;
+}
+.box4 .title {
+  font-weight: 700;
+  margin: 0 0 36px;
+  padding: 0 0 36px;
+  line-height: 1;
+  color: #002e84;
+  font-size: 4.5rem;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .box4 .title {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box4 .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .box4 .title {
+    font-size: 2.25rem;
+  }
+}
+.box4 .title::before {
+  content: "";
+  position: absolute;
+  width: 56px;
+  height: 6px;
+  background: #002e84;
+  display: block;
+  left: 0;
+  bottom: 0;
+}
+.box4 .subTitle {
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin: 0 0 5%;
+  font-size: 1.75rem;
+}
+@media screen and (max-width: 1000px) {
+  .box4 .subTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .box4 .subTitle {
+    font-size: 1.25rem;
+  }
+}
+.box4 .description {
+  font-size: 1.125rem;
+  color: #444444;
+  line-height: 1.8;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 767px) {
+  .box4 .description {
+    font-size: 1rem;
+  }
+}
+.box4 .pic {
+  width: 40%;
+  max-width: 620px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  z-index: 9;
+}
+@media screen and (max-width: 1300px) {
+  .box4 .pic {
+    left: 55%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .box4 .pic {
+    width: 80%;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: translateY(0);
+    margin: -70px auto 0;
+  }
+}
+.box4 .pic .line {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fdd100;
+  display: block;
+  left: 30px;
+  top: 25px;
+}/*# sourceMappingURL=about.css.map */

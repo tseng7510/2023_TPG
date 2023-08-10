@@ -1,0 +1,131 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.faq {
+  .listBox {
+    .item {
+      position: relative;
+      @include transition(all, 0.3);
+
+      & + .item {
+        margin: 20px 0 0;
+      }
+      &.active,
+      &:hover {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        .qBox {
+          &::after {
+            border: 5px solid $secColor;
+          }
+        }
+      }
+      &.active {
+        i {
+          width: 25px;
+          height: 25px;
+          right: 40px;
+          top: 40px;
+          clip-path: polygon(50% 0%, 100% 50%, 80% 50%, 49% 20%, 20% 50%, 0 50%);
+          @include screen('mobile') {
+            top: 24px;
+            right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .qBox {
+    width: 100%;
+    text-align: left;
+    background: none;
+    color: #000;
+    font-weight: 700;
+    font-size: rem(21);
+    display: flex;
+    padding: 38px 100px 37px 140px;
+    position: relative;
+    @include transition(all, 0.3);
+    @include screen('tablet') {
+      font-size: rem(20);
+    }
+    @include screen('mobile') {
+      font-size: rem(18);
+      padding: 20px 20px 20px 80px;
+    }
+    @include screen('xs_mobile') {
+      padding: 20px 50px 20px 60px;
+      letter-spacing: 1px;
+    }
+    &::before {
+      content: 'Q';
+      color: $secColor;
+      font-size: rem(50);
+      font-weight: 400;
+      font-weight: normal;
+      position: absolute;
+      left: 0px;
+      top: 12px;
+      bottom: 0;
+      display: block;
+      width: 100px;
+      height: 76px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: #dddddd 1px solid;
+      @include transition(all, 0.3);
+      @include screen('mobile') {
+        font-size: rem(32);
+        height: 40px;
+        width: 60px;
+      }
+      @include screen('xs_mobile') {
+        width: 40px;
+        font-size: rem(26);
+        top: 20px;
+        height: auto;
+        bottom: 20px;
+        align-items: self-start;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid #dddddd;
+      @include transition(all, 0.3);
+    }
+    i {
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      display: block;
+      border-radius: 100%;
+      background: $mainColor;
+      right: 60px;
+      top: 50px;
+      box-shadow: 10px 0 0 0 $mainColor, 20px 0 0 0 $mainColor;
+      @include screen('mobile') {
+        top: 30px;
+        right: 40px;
+      }
+      @include screen('xs_mobile') {
+        right: 30px;
+        box-shadow: 8px 0 0 0 $mainColor, 16px 0 0 0 $mainColor;
+      }
+    }
+  }
+  .aBox {
+    font-size: rem(18);
+    color: #000000;
+    display: none;
+    padding: 30px 40px;
+    background: $secColor;
+    @include screen('mobile') {
+      font-size: rem(16);
+    }
+    @include screen('xs_mobile') {
+      padding: 20px 30px;
+    }
+  }
+}

@@ -1,0 +1,293 @@
+.infoBox {
+  position: relative;
+}
+.infoBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 1px;
+  top: 140px;
+  width: 30%;
+  display: block;
+  background: #002e84;
+}
+@media screen and (max-width: 767px) {
+  .infoBox::before {
+    top: 70px;
+  }
+}
+.infoBox .container {
+  max-width: none;
+  width: 100%;
+  max-width: 1640px;
+  padding: 0 0 0 20px;
+  margin: 0 0 0 auto;
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .infoBox .container {
+    width: auto;
+    flex-direction: column;
+    max-width: none;
+    padding: 0 20px;
+  }
+}
+
+.activeBox {
+  width: 40%;
+  padding: 0 37px 37px 10px;
+  position: relative;
+  background: #fff;
+  isolation: isolate;
+}
+@media screen and (max-width: 1640px) {
+  .activeBox {
+    margin: 0 0 0 -10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .activeBox {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .activeBox {
+    width: 100%;
+  }
+}
+.activeBox::before {
+  content: "";
+  position: absolute;
+  left: 47px;
+  top: 37px;
+  right: 0;
+  bottom: 0;
+  bottom: 0;
+  opacity: 0.8;
+  background: repeating-linear-gradient(-45deg, #fdd100, #fdd100 2px, transparent 2px, transparent 8px);
+}
+.activeBox .item {
+  overflow: hidden;
+}
+.activeBox .info {
+  position: absolute;
+  inset: 0px 37px 37px 10px;
+  background: linear-gradient(to bottom, rgb(0, 45, 132) 0%, rgba(0, 45, 132, 0.5) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 3.5% 0 3.5% 3.5%;
+}
+.activeBox .info time {
+  display: block;
+  width: 50%;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 20px 10px 0;
+  margin: 0 0 20px;
+  border-bottom: 11px solid #fdd100;
+}
+@media screen and (max-width: 1400px) {
+  .activeBox .info time {
+    font-size: 4.125rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .activeBox .info time {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .activeBox .info time {
+    font-size: 3.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .activeBox .info time {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .activeBox .info time {
+    font-size: 2.25rem;
+  }
+}
+.activeBox .info .description {
+  width: 50%;
+  color: #fdd100;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  overflow: hidden;
+  padding: 0 20px 0 0;
+}
+@media screen and (max-width: 1200px) {
+  .activeBox .info .description {
+    width: 60%;
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .activeBox .info .description {
+    font-size: 1.125rem;
+  }
+}
+
+.otherBox {
+  width: 60%;
+  padding: 70px 0 0 40px;
+  margin: 0 0 0 40px;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .otherBox {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .otherBox {
+    width: auto;
+    padding: 0px 20px;
+    margin: 0 0 0 0px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.otherBox::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  top: 140px;
+  display: block;
+  background: #002e84;
+}
+@media screen and (max-width: 767px) {
+  .otherBox::before {
+    top: 90px;
+  }
+}
+.otherBox .controlBox {
+  position: absolute;
+  top: 120px;
+  left: -40px;
+  transform: translateX(-50%);
+  width: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .otherBox .controlBox {
+    top: auto;
+    left: auto;
+    position: relative;
+    order: -1;
+    margin: -20px auto 0;
+  }
+}
+.otherBox .controlBox::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background: #002e84;
+}
+.otherBox .controlBox .slick-arrow {
+  background: none;
+  padding: 0;
+  z-index: 9;
+}
+.otherBox .controlBox .slick-arrow::before {
+  content: "";
+  display: block;
+  -webkit-mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+          mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+  width: 19px;
+  height: 41px;
+  background: #002e84;
+}
+.otherBox .controlBox .slick-arrow.slick-prev {
+  left: 0px;
+}
+.otherBox .controlBox .slick-arrow.slick-next {
+  right: 0px;
+}
+.otherBox .controlBox .slick-arrow.slick-next::before {
+  transform: rotate(180deg);
+}
+.otherBox .controlBox .slick-arrow:hover {
+  opacity: 0.8;
+}
+@media screen and (min-width: 1000px) {
+  .otherBox .slick-slide {
+    width: 350px;
+  }
+}
+.otherBox .slick-slide > div {
+  padding: 0 50px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .otherBox .slick-slide > div {
+    padding: 0 50px 0 0;
+  }
+}
+.otherBox .item {
+  padding: 0 0 0 14px;
+  max-width: 300px;
+  position: relative;
+}
+.otherBox .item::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #fdd100;
+  left: 0;
+  top: 65px;
+}
+.otherBox .item::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  height: 65px;
+  width: 1px;
+  background: #fdd100;
+}
+.otherBox time {
+  display: block;
+  color: #002e84;
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin: 0 0 40px;
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (max-width: 1000px) {
+  .otherBox time {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .otherBox time {
+    font-size: 1.25rem;
+  }
+}
+.otherBox .description {
+  color: #111111;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  .otherBox .description {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=milestone.css.map */

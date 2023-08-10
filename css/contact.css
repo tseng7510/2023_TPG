@@ -1,0 +1,694 @@
+.inquiryBox .mainBox {
+  padding: 30px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox .mainBox {
+    padding: 0;
+  }
+}
+
+.contactBox .content,
+.inquiryBox .content {
+  position: relative;
+}
+.contactBox .content::before,
+.inquiryBox .content::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(50% + 40px) 0 0;
+  display: block;
+  background: linear-gradient(to bottom, rgba(238, 241, 247, 0) 0%, rgb(238, 241, 247) 100%);
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content::before,
+  .inquiryBox .content::before {
+    display: none;
+  }
+}
+.contactBox .content .container,
+.inquiryBox .content .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .container,
+  .inquiryBox .content .container {
+    flex-direction: column;
+  }
+}
+.contactBox .content .formBox,
+.inquiryBox .content .formBox {
+  width: calc(42% - 40px);
+  border-top: 5px solid #002e84;
+  padding: 30px 40px 8% 0;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .formBox,
+  .inquiryBox .content .formBox {
+    width: 100%;
+    padding: 30px 20px 30px;
+    background: linear-gradient(to bottom, rgba(238, 241, 247, 0) 0%, rgb(238, 241, 247) 100%);
+  }
+}
+.contactBox .content .inquiryList,
+.inquiryBox .content .inquiryList {
+  width: 50%;
+  padding: 20px 0 8%;
+  border-top: 5px solid #fdd100;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .inquiryList,
+  .inquiryBox .content .inquiryList {
+    width: 100%;
+  }
+}
+
+.contactBox .content::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  display: block;
+  background: linear-gradient(to bottom, rgba(238, 241, 247, 0) 0%, rgb(238, 241, 247) 100%);
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content::before {
+    display: none;
+  }
+}
+.contactBox .content .container {
+  width: 100%;
+  max-width: 1652px;
+  margin: 0 0 0 auto;
+  box-sizing: border-box;
+  padding-right: 0;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .container {
+    padding: 0 20px 20px;
+  }
+}
+.contactBox .content .formBox {
+  padding: 30px 40px 5% 0;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .formBox {
+    padding: 30px 20px 5%;
+  }
+}
+.contactBox .content .mapBox {
+  flex-grow: 1;
+  max-width: 1000px;
+  position: relative;
+  margin: -5% 0 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 1000px) {
+  .contactBox .content .mapBox {
+    height: 500px;
+    margin: 0;
+  }
+}
+.contactBox .content .mapBox .pic {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.contactBox .content .mapBox .pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.globalBox .bottomListBox,
+.globalBox .topListBox {
+  padding: 30px 0 0;
+  position: relative;
+}
+.globalBox .bottomListBox::before,
+.globalBox .topListBox::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  top: 0;
+  bottom: 0;
+  background: #ddd;
+}
+@media screen and (max-width: 767px) {
+  .globalBox .bottomListBox::before,
+  .globalBox .topListBox::before {
+    display: none;
+  }
+}
+.globalBox .bottomListBox .listBox,
+.globalBox .topListBox .listBox {
+  gap: 144px;
+  display: flex;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .bottomListBox .listBox,
+  .globalBox .topListBox .listBox {
+    gap: 50px;
+  }
+}
+.globalBox .bottomListBox .listBox .item,
+.globalBox .topListBox .listBox .item {
+  width: calc((100% - 144px) / 2);
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .bottomListBox .listBox .item,
+  .globalBox .topListBox .listBox .item {
+    width: calc((100% - 50px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .globalBox .bottomListBox .listBox .item,
+  .globalBox .topListBox .listBox .item {
+    width: 100%;
+  }
+  .globalBox .bottomListBox .listBox .item .infoBox,
+  .globalBox .topListBox .listBox .item .infoBox {
+    width: 100%;
+  }
+}
+.globalBox .centerListBox {
+  position: relative;
+}
+.globalBox .centerListBox::before {
+  content: "";
+  position: absolute;
+  min-height: 100px;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 30%;
+  display: block;
+  background: linear-gradient(to bottom, rgb(238, 241, 247) 0%, rgba(238, 241, 247, 0) 100%);
+}
+.globalBox .bottomListBox {
+  padding: 50px 0 0;
+}
+.globalBox .bottomListBox::before {
+  display: none;
+}
+.globalBox .listBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.globalBox .item {
+  font-size: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.globalBox .item.full {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid #002e84;
+}
+.globalBox .item.full .infoBox {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .globalBox .item.full .infoBox {
+    display: block;
+  }
+}
+.globalBox .item.full .info {
+  width: 50%;
+  max-width: 500px;
+  padding: 0 30px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .globalBox .item.full .info {
+    width: 100%;
+    padding: 0;
+    max-width: none;
+  }
+}
+.globalBox .item.full ul {
+  max-width: 600px;
+  width: 50%;
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .globalBox .item.full ul {
+    width: 100%;
+    padding: 0;
+    max-width: none;
+  }
+}
+.globalBox .local {
+  display: flex;
+  align-items: center;
+  border: 1px solid #002e84;
+  margin: 0 0 24px;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .local {
+    margin: 0 0 15px;
+  }
+}
+.globalBox .local .en {
+  padding: 1px 10px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: #002e84;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .local .en {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .globalBox .local .en {
+    font-size: 1.125rem;
+  }
+}
+.globalBox .local .zh {
+  color: #002e84;
+  font-size: 1.125rem;
+  padding: 4px 15px 0;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .local .zh {
+    font-size: 1rem;
+  }
+}
+.globalBox .title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .globalBox .title {
+    font-size: 1.25rem;
+  }
+}
+.globalBox .title span {
+  color: #002e84;
+  display: block;
+}
+.globalBox .address {
+  margin: 0 0 15px;
+}
+.globalBox ul {
+  width: 100%;
+  border: #dddddd 1px solid;
+  border-width: 1px 0;
+  margin: 0 0 15px;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox ul {
+    font-size: 1rem;
+  }
+}
+.globalBox ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 8px;
+}
+.globalBox ul li + li {
+  border-top: #dddddd 1px solid;
+}
+.globalBox ul li .label {
+  width: 80px;
+  color: #002e84;
+  font-weight: 600;
+}
+.globalBox .web {
+  width: 100%;
+  display: block;
+  padding: 10px 20px 8px;
+  background: #fdd100;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  margin: auto 0 0;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .globalBox .web {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .globalBox .web {
+    font-size: 1.125rem;
+  }
+}
+.globalBox .web::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  background: #002e84;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.globalBox .web:hover {
+  color: #fff;
+}
+.globalBox .web:hover::before {
+  width: 100%;
+  left: 0;
+}
+.globalBox .map {
+  padding: 10% 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.globalBox .map svg {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  fill: url(#SVGID_1_);
+}
+
+.inquiryBox .inquiryList {
+  padding: 0px 0 8% !important;
+}
+.inquiryBox table {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table {
+    margin: 0;
+  }
+}
+.inquiryBox table thead tr {
+  border-bottom: #fdd100 2px solid;
+}
+.inquiryBox table thead tr th {
+  padding: 0px 15px 20px;
+  border: none;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+.inquiryBox table thead tr th:first-child {
+  text-align: left;
+}
+@media screen and (max-width: 1000px) {
+  .inquiryBox table thead {
+    display: none;
+  }
+}
+.inquiryBox table tbody tr {
+  border-bottom: #dddddd 1px solid;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 0 10px;
+  }
+}
+.inquiryBox table tbody tr:nth-child(even) {
+  background: #f5f5f3;
+}
+.inquiryBox table tbody td {
+  padding: 10px;
+  text-align: center;
+}
+.inquiryBox table tbody td:nth-child(1) {
+  padding: 1px 0;
+  width: 85%;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table tbody td:nth-child(1) {
+    width: calc(100% - 150px);
+  }
+}
+.inquiryBox table tbody td:nth-child(1) .box {
+  color: #111111;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+.inquiryBox table tbody td:nth-child(1) .box .pic {
+  width: 67px;
+  aspect-ratio: 4/2.7;
+  flex-shrink: 0;
+}
+.inquiryBox table tbody td:nth-child(1) .box .title {
+  padding: 0 0 0 20px;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table tbody td:nth-child(2) {
+    border: none !important;
+    width: 150px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table tbody td:nth-last-child(1) {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox table tbody td {
+    margin-top: -1px;
+    width: 100%;
+    display: block;
+  }
+  .inquiryBox table tbody td + td {
+    border-top: #dddddd 1px solid !important;
+  }
+}
+.inquiryBox .qtyBox {
+  width: 130px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+}
+.inquiryBox .qtyBox input {
+  width: 50px;
+  height: 30px;
+  font-size: 18px;
+  color: #202020;
+  text-align: center;
+  border: #e9e9e9 1px solid;
+  border-width: 1px 0;
+}
+.inquiryBox .qtyBox button {
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #fdd100;
+  transition: all 0.3s ease;
+}
+.inquiryBox .qtyBox button:before {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  z-index: -1;
+  background: #002e84;
+  transition: all 0.3s ease;
+}
+.inquiryBox .qtyBox button:after {
+  content: "";
+  line-height: 1;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  aspect-ratio: 1;
+  display: block;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.inquiryBox .qtyBox button.add:after {
+  -webkit-mask: url("../images/icon/icon_minus.svg") no-repeat;
+          mask: url("../images/icon/icon_minus.svg") no-repeat;
+}
+.inquiryBox .qtyBox button.less {
+  padding-top: 0px;
+}
+.inquiryBox .qtyBox button.less:after {
+  -webkit-mask: url("../images/icon/icon_plus.svg") no-repeat;
+          mask: url("../images/icon/icon_plus.svg") no-repeat;
+}
+.inquiryBox .qtyBox button:hover:before {
+  height: 100%;
+  width: 100%;
+}
+.inquiryBox .qtyBox button:hover:after {
+  background: #fff;
+}
+.inquiryBox .del {
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: relative;
+  z-index: 1;
+  line-height: 1;
+  text-align: center;
+  padding: 0;
+  background: none;
+  margin: 0 auto;
+  background: #fdd100;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox .del {
+    width: 100%;
+  }
+}
+.inquiryBox .del:before {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  margin: auto;
+  inset: 0;
+  z-index: -1;
+  background: #002e84;
+  transition: all 0.3s ease;
+}
+.inquiryBox .del:after {
+  content: "\e80b";
+  line-height: 0;
+  font-size: 14px;
+  height: 15px;
+  color: #fff;
+  line-height: 1;
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox .del:after {
+    content: "Delete";
+    color: #fff;
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}
+.inquiryBox .del:hover {
+  border-color: #002e84;
+}
+.inquiryBox .del:hover:before {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .inquiryBox .del:hover {
+    background: #002e84;
+  }
+}
+
+.contactOk {
+  padding: 0 0 50px;
+}
+.contactOk .txt {
+  position: relative;
+  z-index: 5;
+}
+@media screen and (max-width: 1000px) {
+  .contactOk .txt {
+    padding: 0 15px;
+  }
+}
+.contactOk .txt .title {
+  line-height: 1.4;
+  letter-spacing: 0;
+  font-weight: bold;
+  margin: 0 0 30px 0;
+  position: relative;
+  color: #333333;
+}
+.contactOk .txt .title span {
+  font-weight: normal;
+  display: block;
+}
+.contactOk .txt .info {
+  color: #444444;
+  position: relative;
+  z-index: 1;
+}
+.contactOk .txt .info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  left: 0;
+  top: 32px;
+  z-index: -1;
+  background: #002e84;
+}
+.contactOk .txt .info span {
+  max-width: 320px;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 3% 0;
+  line-height: 1.4;
+  color: #fff;
+  display: block;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  padding: 20px;
+  background: #002e84;
+}
+.contactOk .txt .info a {
+  color: #002e84;
+  transition: 0.3 0.3s ease;
+}
+.contactOk .txt .info a:hover {
+  color: #002e84;
+}
+
+.formBox .inputItem {
+  border-bottom: 1px solid #dddddd;
+}
+.formBox .inputItem > label {
+  align-items: flex-start;
+  border-right: 1px solid #ddd;
+}
+.formBox .inputItem select.selectControl,
+.formBox .inputItem input.inputControl,
+.formBox .inputItem textarea.textareaControl {
+  border: none;
+}/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,81 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.listBox {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 55px;
+  @include screen('tablet') {
+    gap: 30px;
+  }
+  @include screen('mobile') {
+    gap: 15px;
+  }
+  @include screen('xs_mobile') {
+    flex-direction: column;
+  }
+  .item {
+    width: calc((100% - 55px) / 2);
+    padding: 0 0 20px 15px;
+    max-width: 700px;
+    isolation: isolate;
+    position: relative;
+    @include transition(all, 0.3);
+    @include screen('tablet') {
+      width: calc((100% - 30px) / 2);
+    }
+    @include screen('mobile') {
+      width: calc((100% - 15px) / 2);
+    }
+    @include screen('xs_mobile') {
+      width: 100%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 24px;
+      top: 24%;
+      bottom: 0;
+      background: #eef1f7;
+      z-index: -1;
+      @include transition(all, 0.3);
+    }
+
+    &:hover {
+      &::before {
+        background: $secColor;
+      }
+    }
+  }
+
+  .pic {
+    max-width: 610px;
+    margin: 0 0 10px auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    background: #fff;
+    aspect-ratio: 16/9;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    @include transition(all, 0.3);
+  }
+  .title {
+    max-width: 610px;
+    margin: 0 0 0 auto;
+    position: relative;
+    font-size: rem(21);
+    font-weight: 400;
+    padding: 0;
+    color: #000;
+    @include transition(all, 0.3);
+    @include screen('tablet') {
+      font-size: rem(22);
+    }
+    @include screen('mobile') {
+      font-size: rem(18);
+    }
+  }
+}

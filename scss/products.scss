@@ -1,0 +1,1261 @@
+// 資料庫
+@import '../scss/partials/shared';
+
+.categoryTitle {
+  font-size: rem(28);
+  font-weight: 800;
+  color: #000;
+  margin: 0 0 4%;
+  @include screen('tablet') {
+    font-size: rem(24);
+  }
+  @include screen('mobile') {
+    font-size: rem(20);
+  }
+}
+.categoryList {
+  margin: 0 0 9%;
+  @include screen('tablet') {
+    margin: 0 0 60px;
+  }
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    @include screen('tablet') {
+      .slick-slide {
+        gap: 0;
+        & > div {
+          padding: 0 20px 0 0;
+        }
+      }
+    }
+    .item {
+      width: calc((100% - 15px * 3) / 4);
+      border: 1px solid #dddddd;
+      border-bottom: 1px solid $secColor;
+      background: none;
+      isolation: isolate;
+      position: relative;
+      @include transition(all, 0.3);
+      @include screen('tablet') {
+        // width: calc((100% - 15px * 2) / 3);
+        .slick-slide > div {
+          padding: 0 10px;
+        }
+      }
+      // @include screen('mobile') {
+      //   width: calc((100% - 15px) / 2);
+      // }
+      // @include screen('xs_mobile') {
+      //   width: 100%;
+      // }
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        display: block;
+        background: $secColor;
+        z-index: -1;
+        @include transition(all, 0.3);
+      }
+      a {
+        display: flex !important;
+        align-items: center;
+        padding: 5px 15px;
+      }
+      .pic {
+        height: 50px;
+        margin: 0 15px 0 0;
+        @include screen('tablet') {
+          flex-shrink: 0;
+        }
+      }
+      .title {
+        color: #000;
+        font-size: rem(18);
+        letter-spacing: 1px;
+        @include screen('tablet') {
+          font-size: rem(16);
+        }
+      }
+      &.active,
+      &:hover {
+        border-color: $secColor;
+        border-bottom: #000 1px solid;
+        &::before {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.productsBox {
+  .mainBox {
+    padding: 30px 0 0;
+  }
+  .pageContent {
+    padding: 0;
+  }
+  .description {
+    color: #545454;
+    font-size: rem(18);
+    max-width: 900px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 300;
+    padding: 0 0 5%;
+  }
+  .productSearch {
+    transform: translateY(50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 0.7;
+    color: #fff;
+    font-size: rem(24);
+    font-weight: 700;
+    z-index: 9;
+    background: $mainColor;
+    padding: 0 20px;
+    max-width: 450px;
+    height: 80px;
+    @include screen('tablet') {
+      font-size: rem(20);
+      height: 60px;
+    }
+    &::after {
+      content: '';
+      width: 40px;
+      height: 7px;
+      mask: url('../images/icon/icon_more.svg') center no-repeat;
+      background: $secColor;
+      display: block;
+      margin: 0 0 0 15px;
+      @include transition(all, 0.3);
+    }
+  }
+}
+
+.productsListBox .productInfoBox {
+  .description {
+    max-width: 900px;
+    color: #545454;
+    font-size: rem(18);
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-weight: 300;
+    min-height: 100px;
+  }
+  .productSearch {
+    margin: 0;
+    width: calc(100% / 3);
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: $mainColor;
+    border: 1px solid $mainColor;
+    color: #fff;
+    font-size: rem(24);
+    font-weight: 700;
+    letter-spacing: 2px;
+    transform: translateY(50%);
+    @include screen('tablet') {
+      width: 50%;
+      height: 60px;
+      font-size: rem(20);
+    }
+    @include screen('mobile') {
+      width: 100%;
+      font-size: rem(18);
+    }
+    &::after {
+      content: '';
+      width: 40px;
+      height: 7px;
+      mask: url('../images/icon/icon_more.svg') center no-repeat;
+      background: $secColor;
+      display: block;
+      @include transition(all, 0.3);
+    }
+  }
+}
+
+// 列表頁
+.products {
+  background: #eef1f7;
+  padding: 60px 0 5%;
+  @include screen('tablet') {
+    padding: 50px 0;
+  }
+  .listBox {
+    display: flex;
+    flex-wrap: wrap;
+    @include screen('xs_mobile') {
+      flex-direction: column;
+    }
+    .item {
+      width: calc((100%) / 3);
+      position: relative;
+      isolation: isolate;
+      border: #dddddd 1px solid;
+      background: #fff;
+      margin: 0 0 -1px;
+      @include transition(all, 0.3);
+      @include screen('mobile') {
+        width: calc((100%) / 2);
+      }
+      @include screen('xs_mobile') {
+        width: 100%;
+      }
+      &:nth-child(3n + 2) {
+        margin: 0 -1px -1px;
+      }
+      a {
+        display: block;
+        border: 4px solid transparent;
+        padding: 10px;
+        @include transition(all, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      &:hover {
+        z-index: 9;
+        box-shadow: 0 0 15px 0 rgba(0, 46, 132, 0.5);
+        border-color: $mainColor;
+        a {
+          border-color: $mainColor;
+        }
+        .info {
+          &::after {
+            font-weight: 700;
+            color: $secColor;
+            background: $mainColor;
+          }
+        }
+      }
+    }
+    .pic {
+      aspect-ratio: 4/2.7;
+      max-width: 300px;
+      margin: 10px auto 40px;
+      z-index: 2;
+    }
+    .info {
+      width: 100%;
+      &::after {
+        content: 'VIEW MORE';
+        display: block;
+        background: $secColor;
+        font-size: rem(15);
+        text-align: center;
+        padding: 10px 5px 8px;
+        @include transition(all, 0.3);
+      }
+    }
+    .title {
+      color: #000;
+      font-size: rem(28);
+      font-weight: 700;
+      display: block;
+      line-height: 1;
+      text-align: center;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      z-index: 2;
+      margin: 0 0 14px;
+      letter-spacing: 2px;
+      text-indent: 2px;
+      @include transition(all, 0.3);
+      @include screen('tablet') {
+        font-size: rem(24);
+      }
+      @include screen('mobile') {
+        font-size: rem(20);
+      }
+    }
+  }
+}
+
+//list
+.productsListBox .productsInfoTopBox {
+  position: relative;
+  .container {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: flex-start;
+    // flex-wrap: wrap;
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    .pageTitle {
+      float: left;
+      width: 45%;
+      @include screen('tablet') {
+        width: 100%;
+        float: none;
+      }
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 48% 0 0;
+    display: block;
+    background: linear-gradient(to bottom, rgba(238, 241, 247, 0) 0%, rgba(238, 241, 247, 1) 100%);
+    @include screen('tablet') {
+      inset: 0;
+    }
+  }
+
+  .infoBox .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include screen('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  .productsInfo {
+    width: 45%;
+    padding: 0 0 150px;
+    position: relative;
+    @include screen('tablet') {
+      padding: 0 0 20px;
+      width: 100%;
+      float: none;
+    }
+    .description {
+      padding: 0 30px 0 0;
+      color: #545454;
+      font-size: rem(18);
+      line-height: 1.8;
+      letter-spacing: 1px;
+      font-weight: 300;
+      @include screen('tablet') {
+        font-size: rem(16);
+        padding: 0;
+        margin: 0 0 30px;
+      }
+    }
+    .more {
+      width: 230px;
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $secColor;
+      padding: 20px 14px;
+      font-weight: 600;
+      line-height: 1;
+      isolation: isolate;
+      font-size: rem(24);
+      @include transition(all, 0.3);
+      @include screen('tablet') {
+        position: relative;
+        margin: 0 auto;
+        font-size: rem(16);
+      }
+      &::before {
+        content: '';
+        width: 25px;
+        aspect-ratio: 25/34;
+        display: block;
+        mask: url('../images/icon/icon_pdf.svg') center no-repeat;
+        background: #000;
+        margin: 0 10px 0 0;
+        @include transition(all, 0.3);
+        @include screen('tablet') {
+          width: 20px;
+        }
+      }
+      &::after {
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        margin: auto;
+        inset: 0;
+        z-index: -1;
+        background: $mainColor;
+        @include transition(all, 0.3);
+      }
+      &:hover {
+        color: #fff;
+        &::before {
+          background: #fff;
+        }
+        &::after {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .productsPic {
+    max-width: 720px;
+    aspect-ratio: 4/2.7;
+    width: 55%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 60px;
+    order: 5;
+    margin: -10% 0 0;
+    @include screen('tablet') {
+      order: 0;
+      position: relative;
+      width: 100%;
+      top: auto;
+      margin: 0 auto 30px;
+      float: none;
+    }
+  }
+}
+
+.productsSearchBox .productsInfoBottomBox,
+.productsListBox .productsInfoBottomBox {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @include screen('tablet') {
+      flex-direction: column;
+    }
+  }
+  .sideFilter {
+    width: 230px;
+    margin: 0 30px 0 0;
+  }
+
+  //filter
+  aside {
+    width: 230px;
+    flex-shrink: 0;
+    margin: 62.3px 30px 0 0;
+    @include screen('tablet') {
+      width: 100%;
+      margin: 0 0 10px;
+    }
+    .sideBox {
+      @include screen('tabletMin') {
+        top: 75px;
+        position: sticky;
+      }
+    }
+    .title {
+      color: #fff;
+      padding: 18px 20px;
+      font-size: rem(28);
+      font-weight: 700;
+      background: $mainColor;
+      display: block;
+      border: none;
+      width: 100%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      cursor: unset;
+      @include transition(all, 0.3);
+      @include screenWidth('1200') {
+        font-size: rem(22);
+        padding: 15px;
+      }
+      @include screen('tablet') {
+        cursor: pointer;
+      }
+      @include screen('mobile') {
+        font-size: rem(20);
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 25px;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        mask: url('../images/icon/icon_filter.svg') center no-repeat;
+        mask-size: contain;
+        background: #fff;
+        @include screenWidth('1200') {
+          margin-left: 20px;
+        }
+      }
+      &.open,
+      &.active:hover {
+        background: $mainColor;
+      }
+      @include screen('tabletMin') {
+        span {
+          display: none;
+        }
+      }
+    }
+    .item {
+      & + .item {
+        border-top: 1px solid #dadfe3;
+      }
+      &.active {
+        .subTitle {
+          &::after {
+            clip-path: polygon(100% 40%, 100% 60%, 50% 60%, 0 60%, 0 40%, 50% 40%);
+          }
+        }
+      }
+    }
+    .subTitle {
+      font-size: rem(18);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #525252;
+      background: none;
+      width: 100%;
+      text-align: left;
+      padding: 20px 0 18px;
+      line-height: 1.4;
+      @include transition(all, 0.3);
+      position: relative;
+      &::after {
+        content: '';
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        clip-path: polygon(100% 40%, 100% 60%, 50% 100%, 0 60%, 0 40%, 50% 80%);
+        background: #8c9fb0;
+        @include transition(all, 0.3);
+      }
+      &:hover {
+        color: $mainColor;
+        &::after {
+          background: $mainColor;
+        }
+      }
+    }
+    .contentBox {
+      border: #dddddd 1px solid;
+      padding: 0 15px;
+      @include screen('tablet') {
+        display: none;
+      }
+      &.open {
+        display: block;
+      }
+      ul {
+        border-top: 1px solid #dadfe3;
+        display: none;
+        padding: 15px 0;
+      }
+      li {
+        display: flex;
+        position: relative;
+        & + li {
+          margin-top: 10px;
+        }
+      }
+      [type='checkbox'] {
+        margin-right: 10px;
+        cursor: pointer;
+        opacity: 0;
+        &:checked + label {
+          &::before {
+            background-position: center top;
+          }
+        }
+      }
+      label {
+        display: block;
+        flex-grow: 1;
+        cursor: pointer;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 13px;
+          height: 13px;
+          display: block;
+          background: url('../images/icon/checkbox.png') bottom no-repeat;
+          left: 0px;
+          top: 3px;
+          z-index: 9;
+        }
+      }
+    }
+  }
+
+  .productsFilterList {
+    width: 100%;
+    flex-grow: 1;
+    table {
+      width: 100%;
+    }
+  }
+
+  .tableBtn {
+    font-size: rem(18);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid $secColor;
+    display: block;
+    position: relative;
+    max-width: 160px;
+    text-align: center;
+    margin: 10px 0 10px auto;
+    background: #fff;
+    z-index: 9;
+    @include transition(all, 0.3);
+    @include screen('tablet') {
+      max-width: none;
+      width: 100%;
+    }
+    &:hover {
+      background: $secColor;
+    }
+  }
+  .tableBox {
+    overflow-x: auto;
+    position: relative;
+    scrollbar-color: $mainColor rgba(0, 0, 0, 0.2);
+    scrollbar-width: thin;
+    background: #fff;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 100px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      background: $mainColor;
+    }
+
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+      border-radius: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      border: #dddddd 1px solid;
+      thead tr {
+        border: $mainColor 1px solid;
+      }
+    }
+    tr {
+      position: relative;
+      & + tr {
+        border-top: #dddddd 1px solid;
+      }
+      &:hover {
+        background: $secColor;
+      }
+    }
+    td,
+    th {
+      text-align: center;
+      padding: 18px 20px 16px;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    th {
+      background: $mainColor;
+      color: #fff;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    td {
+      &:first-child {
+        text-align: left;
+        font-size: rem(18);
+        font-weight: 600;
+        color: $mainColor;
+      }
+      a {
+        position: absolute;
+        inset: 0;
+      }
+    }
+  }
+}
+
+//detail共用
+.productsDetailBox {
+  .mainBox {
+    padding: 30px 0 0px;
+    @include screen('tablet') {
+      padding: 0;
+    }
+  }
+  .productsInfoTopBox {
+    padding: 0 0 4.5%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 80%, rgba(238, 241, 247, 1) 100%);
+    .container {
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+    .titleBox {
+      margin: 0 0 40px;
+      @include screen('tablet') {
+        margin: 0 0 20px;
+      }
+      .pageTitle {
+        letter-spacing: 0;
+        margin: 0 0 10px;
+      }
+      .subTitle {
+        font-size: rem(36);
+        font-weight: 700;
+        color: $mainColor;
+        letter-spacing: 2px;
+      }
+      .pageTitle,
+      .subTitle {
+        width: 47%;
+        @include screen('tablet') {
+          width: 100%;
+        }
+      }
+    }
+
+    .infoBox .container {
+      display: flex;
+      align-items: flex-start;
+      @include screen('tablet') {
+        flex-direction: column;
+      }
+    }
+
+    .productsInfo {
+      width: 47%;
+      position: relative;
+      @include screen('tablet') {
+        padding: 0 0 0px;
+        width: 100%;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-top: 1px solid #dddddd;
+      tr {
+        border-bottom: 1px solid #dddddd;
+      }
+      th {
+        width: 210px;
+        background: #eef1f7;
+        font-size: rem(18);
+        font-weight: normal;
+      }
+      th,
+      td {
+        padding: 18px 20px 16px;
+        text-align: left;
+      }
+      td {
+        color: #535353;
+        font-size: rem(18);
+        @include screen('tablet') {
+          font-size: rem(16);
+        }
+      }
+    }
+  }
+  .picBox {
+    max-width: 720px;
+    width: 53%;
+    background: #fff;
+    box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 60px;
+    margin: -10% 0 0;
+    order: 5;
+    @include screen('tablet') {
+      position: relative;
+      width: 100%;
+      top: auto;
+      margin: 0 auto 30px;
+      order: 0;
+    }
+    .bigPic {
+      padding: 30px;
+      .pic {
+        aspect-ratio: 4/2.7;
+      }
+    }
+    .navPic {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        background: #eee;
+        right: 10px;
+        left: 10px;
+        top: 0;
+        display: block;
+      }
+      * {
+        line-height: 0;
+      }
+      .slick-slide {
+        & > div {
+          padding: 0 6px;
+        }
+      }
+      .pic {
+        border: 1px solid #dddddd;
+        aspect-ratio: 1;
+      }
+      .slick-arrow {
+        background: none;
+        padding: 20px;
+        z-index: 9;
+        flex-shrink: 0;
+        &::before {
+          content: '';
+          display: block;
+          mask: url('../images/icon/icon_arrow.svg') center no-repeat;
+          width: 19px;
+          height: 41px;
+          background: #cccccc;
+          opacity: 0.5;
+        }
+        &.slick-prev {
+          left: 10px;
+        }
+        &.slick-next {
+          right: 10px;
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  .productBtnBox {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    @include screen('mobile') {
+      flex-direction: column;
+    }
+    .buttonBox {
+      display: flex;
+      height: 80px;
+      flex-grow: 1;
+      padding: 0 40px 0 0;
+      background: $mainColor;
+      @include screen('mobile') {
+        padding: 0;
+      }
+      button {
+        background: $mainColor;
+        color: $secColor;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        width: auto;
+        font-size: rem(24);
+        font-weight: 700;
+        position: relative;
+        &::after {
+          content: 'Download';
+          font-size: rem(16);
+          color: #fff;
+          font-weight: normal;
+          display: block;
+          margin: 5px 0 0;
+        }
+        & + button {
+          &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            top: 10px;
+            bottom: 10px;
+            left: 0;
+            opacity: 0.2;
+            background: #fff;
+          }
+        }
+      }
+    }
+    button.inquiryBtn {
+      background: $secColor;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35%;
+      font-size: rem(21);
+      font-weight: 700;
+      padding: 0 0 0 20px;
+      margin: -1px -1px -1px -40px;
+      clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%);
+      position: relative;
+      @include screen('mobile') {
+        font-size: rem(18);
+        width: 100%;
+        clip-path: none;
+        margin: 0;
+        padding: 12px 10px 10px;
+      }
+      &::before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        display: block;
+        background: $importantColor;
+        border-radius: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(64px);
+        top: 18px;
+        z-index: 1;
+        @include screen('mobile') {
+          width: 8px;
+          height: 8px;
+          top: 12px;
+          transform: translateX(49px);
+        }
+      }
+      &::after {
+        content: '';
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        margin: 0 0 0 15px;
+        display: block;
+        mask: url('../images/icon/icon_basket.svg') center no-repeat;
+        background: #000;
+        @include screen('mobile') {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+  .productsInfoBottomBox {
+    background: #eef1f8;
+    // background: url('../images/in/products_bg.jpg') center no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // padding: 0 0 110px;
+    // position: relative;
+    // isolation: isolate;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   inset: 0;
+    //   background: rgba(0, 46, 132, 0.8);
+    //   z-index: 1;
+    // }
+    .container {
+      position: relative;
+      // z-index: 2;
+      // border-top: 5px solid $mainColor;
+      .content {
+        border-top: 5px solid $mainColor;
+      }
+      .item {
+        max-width: 1350px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        padding: 5% 0;
+        color: #333333;
+        @include screen('mobile') {
+          flex-direction: column;
+        }
+        & + .item {
+          border-top: #cdcdcd 1px solid;
+        }
+        .itemTitle {
+          position: sticky;
+          top: 60px;
+          width: 25%;
+          font-size: rem(32);
+          font-weight: 500;
+          min-width: 120px;
+          color: $mainColor;
+          letter-spacing: 10px;
+          text-indent: 10px;
+          padding: 0 20px 0 0;
+          @include screen('tablet') {
+            font-size: rem(26);
+            letter-spacing: 5px;
+            text-indent: 5px;
+          }
+          @include screen('mobile') {
+            font-size: rem(18);
+            letter-spacing: 2px;
+            text-indent: 2px;
+            width: 100%;
+            padding: 0;
+            margin: 0 0 10px;
+            position: relative;
+            top: 0;
+          }
+        }
+        .infoBox {
+          flex-grow: 1;
+          width: 75%;
+          font-size: rem(18);
+          @include screen('tablet') {
+            font-size: rem(16);
+          }
+          @include screen('mobile') {
+            width: 100%;
+            padding: 0;
+          }
+        }
+        li {
+          margin: 0 0 10px;
+        }
+        .feature {
+          li {
+            margin: 0 0 20px;
+            padding: 0 0 0 20px;
+            position: relative;
+          }
+          .title {
+            font-size: rem(21);
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-indent: 2px;
+            color: $mainColor;
+            margin: 0 0 5px;
+            @include screen('tablet') {
+              font-size: rem(18);
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              width: 3px;
+              height: 16px;
+              background: $secColor;
+              display: block;
+              left: 0px;
+              top: 6px;
+            }
+          }
+        }
+        .access {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          overflow-x: auto;
+          scrollbar-color: $mainColor rgba(0, 0, 0, 0.2);
+          scrollbar-width: thin;
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: $mainColor;
+          }
+
+          &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            background: rgba(0, 0, 0, 0.1);
+          }
+          .pic {
+            margin: 0 0 10px;
+          }
+          .title {
+            text-align: center;
+          }
+          li {
+            width: calc((100% - 10px * 4) / 5);
+            @include screen('mobile') {
+              width: calc((100% - 10px * 3) / 4);
+            }
+            @include screen('xs_mobile') {
+              width: calc((100% - 10px * 2) / 3);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.productsSearchBox {
+  .pageTitle {
+    margin: 0 0 0px;
+  }
+  .productsSearch {
+    .subTitle {
+      font-size: rem(24);
+      font-weight: 700;
+      margin: 0 0 40px;
+      color: $mainColor;
+      @include screen('tablet') {
+        font-size: rem(20);
+      }
+      @include screen('mobile') {
+        font-size: rem(18);
+        margin: 0 0 20px;
+      }
+    }
+    .searchBoxOut {
+      max-width: 1480px;
+      border-top: 5px solid $mainColor;
+      padding: 3% 3%;
+      margin: 20px auto 0;
+    }
+    .searchBox {
+      white-space: nowrap;
+      .title {
+        color: $mainColor;
+        font-size: rem(24);
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px 0;
+        letter-spacing: 2px;
+        @include screen('tablet') {
+          font-size: rem(20);
+        }
+        @include screen('mobile') {
+          font-size: rem(18);
+        }
+        &::before {
+          content: '';
+          width: 3px;
+          height: 16px;
+          display: block;
+          margin: 0 15px 0 0;
+          background: $mainColor;
+        }
+      }
+      .formBox {
+        padding: 0;
+        display: flex;
+        & + .title {
+          margin: 5% 0 15px;
+        }
+        .inputItem {
+          padding: 0;
+          flex-wrap: wrap;
+          @include screen('tablet') {
+            width: calc(100% - 100px);
+            margin: 0 5px 0 0;
+          }
+          @include screen('mobile') {
+            width: calc(100% - 80px);
+          }
+        }
+        .select {
+          @include screen('tablet') {
+            padding: 0;
+          }
+        }
+        select,
+        input {
+          height: 60px;
+          @include screen('tablet') {
+            height: 40px;
+          }
+        }
+        button {
+          font-size: rem(24);
+          font-weight: 700;
+          color: #fff;
+          padding: 0;
+          background: $mainColor;
+          width: 160px;
+          flex-shrink: 0;
+          @include screen('tablet') {
+            font-size: rem(18);
+            width: 100px;
+          }
+          @include screen('mobile') {
+            font-size: rem(16);
+            width: 80px;
+          }
+        }
+        label {
+          flex-grow: 1;
+          margin: 0 30px 0 0;
+          @include screen('tablet') {
+            width: 100%;
+            margin: 0;
+            & + label {
+              margin: 10px 0 0;
+            }
+          }
+          span {
+            display: block;
+            margin: 0 10px 0 0;
+            font-size: rem(18);
+            font-weight: 400;
+            @include screen('tablet') {
+              width: 70px;
+            }
+            @include screen('mobile') {
+              font-size: rem(16);
+            }
+          }
+        }
+      }
+    }
+  }
+  .tableBox {
+    td,
+    th {
+      text-align: center;
+      padding: 18px 20px 16px;
+      &:nth-child(1) {
+        padding: 0;
+        padding: 10px;
+        .pic {
+          max-width: 100px;
+        }
+      }
+      &:nth-child(2) {
+        text-align: left;
+      }
+    }
+  }
+}
