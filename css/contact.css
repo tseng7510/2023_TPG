@@ -334,7 +334,7 @@
   display: block;
   padding: 10px 20px 8px;
   background: #fdd100;
-  font-size: 0.9375rem;
+  font-size: 0.937rem;
   font-weight: 400;
   overflow: hidden;
   position: relative;
@@ -440,7 +440,7 @@
 }
 @media screen and (max-width: 767px) {
   .inquiryBox table tbody td:nth-child(1) {
-    width: calc(100% - 150px);
+    width: 100%;
   }
 }
 .inquiryBox table tbody td:nth-child(1) .box {
@@ -468,11 +468,13 @@
     width: 150px;
     display: flex;
     align-items: center;
+    border-top: #dddddd 1px solid !important;
   }
 }
 @media screen and (max-width: 767px) {
   .inquiryBox table tbody td:nth-last-child(1) {
-    padding: 0;
+    padding: 10px;
+    width: calc(100% - 150px);
   }
 }
 @media screen and (max-width: 767px) {

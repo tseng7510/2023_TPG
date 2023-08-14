@@ -71,41 +71,41 @@
     time {
       display: block;
       width: 50%;
-      font-size: rem(72);
+      font-size: $fz72;
       font-weight: 600;
       color: #fff;
       padding: 0 20px 10px 0;
       margin: 0 0 20px;
       border-bottom: 11px solid $secColor;
       @include screenWidth('1400') {
-        font-size: rem(66);
+        font-size: $fz66;
       }
       @include screenWidth('1200') {
         width: 60%;
       }
       @include screen('tablet') {
-        font-size: rem(60);
+        font-size: $fz60;
       }
       @include screen('mobile') {
-        font-size: rem(48);
+        font-size: $fz48;
       }
       @include screen('xs_mobile') {
-        font-size: rem(36);
+        font-size: $fz36;
       }
     }
     .description {
       width: 50%;
       color: $secColor;
-      font-size: rem(24);
+      font-size: $fz24;
       flex-grow: 1;
       overflow: hidden;
       padding: 0 20px 0 0;
       @include screenWidth('1200') {
         width: 60%;
-        font-size: rem(20);
+        font-size: $fz20;
       }
       @include screen('mobile') {
-        font-size: rem(18);
+        font-size: $fz18;
       }
     }
   }
@@ -230,25 +230,25 @@
     display: block;
     color: $mainColor;
     font-weight: 600;
-    font-size: rem(36);
+    font-size: $fz36;
     margin: 0 0 40px;
     height: 50px;
     display: flex;
     align-items: flex-end;
     @include screen('tablet') {
-      font-size: rem(28);
+      font-size: $fz28;
     }
     @include screen('mobile') {
-      font-size: rem(20);
+      font-size: $fz20;
     }
   }
   .description {
     color: #111111;
     line-height: 1.8;
     letter-spacing: 1px;
-    font-size: rem(18);
+    font-size: $fz18;
     @include screen('mobile') {
-      font-size: rem(16);
+      font-size: $fz16;
     }
   }
 }

@@ -75,8 +75,8 @@
 @media screen and (max-width: 767px) {
   .applicationTopBox .infoBox i {
     order: -1;
-    width: 200px;
-    margin: 0 0 0px -50px;
+    width: 90px;
+    margin: 0 0 0px -20px;
   }
 }
 .applicationTopBox .infoBox i img {
@@ -188,7 +188,7 @@
   content: "VIEW MORE";
   display: block;
   background: #fdd100;
-  font-size: 0.9375rem;
+  font-size: 0.937rem;
   text-align: center;
   font-weight: 500;
   padding: 10px 5px 8px;

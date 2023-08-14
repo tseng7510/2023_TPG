@@ -171,7 +171,7 @@
   }
 
   .item {
-    font-size: rem(18);
+    font-size: $fz18;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -223,35 +223,35 @@
     }
     .en {
       padding: 1px 10px 0;
-      font-size: rem(24);
+      font-size: $fz24;
       font-weight: 600;
       color: #fff;
       background: $mainColor;
       @include screen('tablet') {
-        font-size: rem(22);
+        font-size: $fz22;
       }
       @include screen('mobile') {
-        font-size: rem(18);
+        font-size: $fz18;
       }
     }
     .zh {
       color: $mainColor;
-      font-size: rem(18);
+      font-size: $fz18;
       padding: 4px 15px 0;
       @include screen('tablet') {
-        font-size: rem(16);
+        font-size: $fz16;
       }
     }
   }
   .title {
-    font-size: rem(28);
+    font-size: $fz28;
     font-weight: 600;
     margin: 0 0 10px;
     @include screen('tablet') {
-      font-size: rem(24);
+      font-size: $fz24;
     }
     @include screen('mobile') {
-      font-size: rem(20);
+      font-size: $fz20;
     }
     span {
       color: $mainColor;
@@ -267,7 +267,7 @@
     border-width: 1px 0;
     margin: 0 0 15px;
     @include screen('tablet') {
-      font-size: rem(16);
+      font-size: $fz16;
     }
     li {
       display: flex;
@@ -288,7 +288,7 @@
     display: block;
     padding: 10px 20px 8px;
     background: $secColor;
-    font-size: rem(15);
+    font-size: $fz15;
     font-weight: 400;
     overflow: hidden;
     position: relative;
@@ -297,10 +297,10 @@
     margin: auto 0 0;
     @include transition(all, 0.3);
     @include screen('tablet') {
-      font-size: rem(22);
+      font-size: $fz22;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
     }
     &::before {
       content: '';
@@ -356,7 +356,7 @@
           padding: 0px 15px 20px;
           border: none;
           font-weight: 400;
-          font-size: rem(18);
+          font-size: $fz18;
           &:first-child {
             text-align: left;
           }
@@ -387,7 +387,7 @@
           padding: 1px 0;
           width: 85%;
           @include screen('mobile') {
-            width: calc(100% - 150px);
+            width: 100%;
           }
           .box {
             color: #111111;
@@ -405,7 +405,7 @@
             .title {
               padding: 0 0 0 20px;
               font-weight: 600;
-              font-size: rem(18);
+              font-size: $fz18;
             }
           }
         }
@@ -415,11 +415,13 @@
             width: 150px;
             display: flex;
             align-items: center;
+            border-top: #dddddd 1px solid !important;
           }
         }
         &:nth-last-child(1) {
           @include screen('mobile') {
-            padding: 0;
+            padding: 10px;
+            width: calc(100% - 150px);
           }
         }
         @include screen('mobile') {

@@ -269,7 +269,7 @@
   content: "VIEW MORE";
   display: block;
   background: #fdd100;
-  font-size: 0.9375rem;
+  font-size: 0.937rem;
   text-align: center;
   padding: 10px 5px 8px;
   transition: all 0.3s ease;
@@ -299,6 +299,15 @@
 @media screen and (max-width: 767px) {
   .products .listBox .title {
     font-size: 1.25rem;
+  }
+}
+
+.productsInfoTopBox {
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 1000px) {
+  .productsInfoTopBox {
+    margin-bottom: 10px;
   }
 }
 
@@ -472,20 +481,86 @@
 .productsListBox .productsInfoBottomBox aside {
   width: 230px;
   flex-shrink: 0;
-  margin: 62.3px 30px 0 0;
+  margin: 0 30px 0 0;
+  position: relative;
+  background: #fff;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 1000px) {
   .productsSearchBox .productsInfoBottomBox aside,
   .productsListBox .productsInfoBottomBox aside {
-    width: 100%;
-    margin: 0 0 10px;
+    position: fixed;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 20;
+    top: 100px;
+    bottom: 0;
+    margin: 0;
   }
+}
+.productsSearchBox .productsInfoBottomBox aside.active,
+.productsListBox .productsInfoBottomBox aside.active {
+  transform: translateX(0%);
+}
+.productsSearchBox .productsInfoBottomBox aside .sideBtn,
+.productsListBox .productsInfoBottomBox aside .sideBtn {
+  line-height: 2;
+  display: none;
+  position: absolute;
+  width: 35px;
+  left: 100%;
+  top: 10px;
+  writing-mode: vertical-lr;
+  background: #fff;
+  padding: 10px 0px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .sideBtn,
+  .productsListBox .productsInfoBottomBox aside .sideBtn {
+    display: block;
+  }
+}
+.productsSearchBox .productsInfoBottomBox aside .sideBox,
+.productsListBox .productsInfoBottomBox aside .sideBox {
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-color: #002e84 rgba(0, 0, 0, 0.2);
+  scrollbar-width: thin;
+  background: #fff;
+}
+.productsSearchBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar,
+.productsListBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.productsSearchBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar-thumb,
+.productsListBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #002e84;
+}
+.productsSearchBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar-track,
+.productsListBox .productsInfoBottomBox aside .sideBox::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 1000px) {
   .productsSearchBox .productsInfoBottomBox aside .sideBox,
   .productsListBox .productsInfoBottomBox aside .sideBox {
     top: 75px;
     position: sticky;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .productsSearchBox .productsInfoBottomBox aside .sideBox,
+  .productsListBox .productsInfoBottomBox aside .sideBox {
+    position: absolute;
+    inset: 0;
   }
 }
 .productsSearchBox .productsInfoBottomBox aside .title,
@@ -605,16 +680,6 @@
   border: #dddddd 1px solid;
   padding: 0 15px;
 }
-@media screen and (max-width: 1000px) {
-  .productsSearchBox .productsInfoBottomBox aside .contentBox,
-  .productsListBox .productsInfoBottomBox aside .contentBox {
-    display: none;
-  }
-}
-.productsSearchBox .productsInfoBottomBox aside .contentBox.open,
-.productsListBox .productsInfoBottomBox aside .contentBox.open {
-  display: block;
-}
 .productsSearchBox .productsInfoBottomBox aside .contentBox ul,
 .productsListBox .productsInfoBottomBox aside .contentBox ul {
   border-top: 1px solid #dadfe3;
@@ -662,6 +727,7 @@
 .productsListBox .productsInfoBottomBox .productsFilterList {
   width: 100%;
   flex-grow: 1;
+  position: relative;
 }
 .productsSearchBox .productsInfoBottomBox .productsFilterList table,
 .productsListBox .productsInfoBottomBox .productsFilterList table {
@@ -678,14 +744,20 @@
   position: relative;
   max-width: 160px;
   text-align: center;
-  margin: 10px 0 10px auto;
+  margin: 0 0 0 auto;
   background: #fff;
   z-index: 9;
+  position: absolute;
+  right: 0;
+  transform: translateY(calc(-100% - 10px));
   transition: all 0.3s ease;
 }
 @media screen and (max-width: 1000px) {
   .productsSearchBox .productsInfoBottomBox .tableBtn,
   .productsListBox .productsInfoBottomBox .tableBtn {
+    position: relative;
+    margin: 0 0 10px;
+    transform: translateY(0);
     max-width: none;
     width: 100%;
   }
@@ -782,6 +854,7 @@
 }
 .productsDetailBox .productsInfoTopBox {
   padding: 0 0 4.5%;
+  margin-bottom: 0;
   background: linear-gradient(to bottom, rgb(255, 255, 255) 80%, rgb(238, 241, 247) 100%);
 }
 .productsDetailBox .productsInfoTopBox .container:after {
@@ -880,6 +953,7 @@
     top: auto;
     margin: 0 auto 30px;
     order: 0;
+    box-shadow: none;
   }
 }
 .productsDetailBox .picBox .bigPic {
@@ -1000,7 +1074,7 @@
   align-items: center;
   justify-content: center;
   width: 35%;
-  font-size: 1.3125rem;
+  font-size: 1.312rem;
   font-weight: 700;
   padding: 0 0 0 20px;
   margin: -1px -1px -1px -40px;
@@ -1137,7 +1211,7 @@
   position: relative;
 }
 .productsDetailBox .productsInfoBottomBox .container .item .feature .title {
-  font-size: 1.3125rem;
+  font-size: 1.312rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-indent: 2px;

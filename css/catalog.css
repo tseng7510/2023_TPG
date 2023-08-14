@@ -306,14 +306,14 @@
   display: block;
   font-weight: 500;
   background: #fdd100;
-  font-size: 0.9375rem;
+  font-size: 0.937rem;
   text-align: center;
   padding: 10px 5px 8px;
   transition: all 0.3s ease;
 }
 .catalogBottom .listBox .title {
   color: #000;
-  font-size: 1.3125rem;
+  font-size: 1.312rem;
   font-weight: 700;
   display: block;
   line-height: 1;

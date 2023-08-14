@@ -40,16 +40,16 @@
     background: none;
     color: #000;
     font-weight: 700;
-    font-size: rem(21);
+    font-size: $fz21;
     display: flex;
     padding: 38px 100px 37px 140px;
     position: relative;
     @include transition(all, 0.3);
     @include screen('tablet') {
-      font-size: rem(20);
+      font-size: $fz20;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
       padding: 20px 20px 20px 80px;
     }
     @include screen('xs_mobile') {
@@ -59,7 +59,7 @@
     &::before {
       content: 'Q';
       color: $secColor;
-      font-size: rem(50);
+      font-size: $fz50;
       font-weight: 400;
       font-weight: normal;
       position: absolute;
@@ -75,13 +75,13 @@
       border-right: #dddddd 1px solid;
       @include transition(all, 0.3);
       @include screen('mobile') {
-        font-size: rem(32);
+        font-size: $fz32;
         height: 40px;
         width: 60px;
       }
       @include screen('xs_mobile') {
         width: 40px;
-        font-size: rem(26);
+        font-size: $fz26;
         top: 20px;
         height: auto;
         bottom: 20px;
@@ -116,13 +116,13 @@
     }
   }
   .aBox {
-    font-size: rem(18);
+    font-size: $fz18;
     color: #000000;
     display: none;
     padding: 30px 40px;
     background: $secColor;
     @include screen('mobile') {
-      font-size: rem(16);
+      font-size: $fz16;
     }
     @include screen('xs_mobile') {
       padding: 20px 30px;

@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: rem(24);
+    font-size: $fz24;
     font-weight: 600;
     overflow: hidden;
     position: relative;
@@ -31,10 +31,10 @@
     @include transition(all, 0.3);
     @include screen('tablet') {
       margin: 10px 0 0;
-      font-size: rem(22);
+      font-size: $fz22;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
     }
     &::after {
       content: '';
@@ -71,14 +71,14 @@
   }
 }
 .categoryTitle {
-  font-size: rem(28);
+  font-size: $fz28;
   font-weight: 800;
   color: #000;
   @include screen('tablet') {
-    font-size: rem(24);
+    font-size: $fz24;
   }
   @include screen('mobile') {
-    font-size: rem(20);
+    font-size: $fz20;
   }
 }
 .categoryList {
@@ -124,10 +124,10 @@
       }
       .title {
         color: #000;
-        font-size: rem(18);
+        font-size: $fz18;
         letter-spacing: 1px;
         @include screen('tablet') {
-          font-size: rem(16);
+          font-size: $fz16;
         }
       }
       &.active,
@@ -157,12 +157,12 @@
   }
   .description {
     color: #535353;
-    font-size: rem(18);
+    font-size: $fz18;
     letter-spacing: 0.8px;
     padding: 5% 0 0;
     line-height: 1.8;
     @include screen('mobile') {
-      font-size: rem(16);
+      font-size: $fz16;
     }
   }
   .catalogPic {
@@ -190,14 +190,14 @@
     color: #fff;
     padding: 10px 30px;
     background: none;
-    font-size: rem(24);
+    font-size: $fz24;
     font-weight: 600;
     @include transition(all, 0.3);
     @include screen('tablet') {
-      font-size: rem(22);
+      font-size: $fz22;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
     }
     & + button {
       border-left: #305499 1px solid;
@@ -286,7 +286,7 @@
         display: block;
         font-weight: 500;
         background: $secColor;
-        font-size: rem(15);
+        font-size: $fz15;
         text-align: center;
         padding: 10px 5px 8px;
         @include transition(all, 0.3);
@@ -294,7 +294,7 @@
     }
     .title {
       color: #000;
-      font-size: rem(21);
+      font-size: $fz21;
       font-weight: 700;
       display: block;
       line-height: 1;
@@ -309,10 +309,10 @@
       text-indent: 2px;
       @include transition(all, 0.3);
       @include screen('tablet') {
-        font-size: rem(22);
+        font-size: $fz22;
       }
       @include screen('mobile') {
-        font-size: rem(18);
+        font-size: $fz18;
       }
     }
   }

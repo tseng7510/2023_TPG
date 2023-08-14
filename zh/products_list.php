@@ -76,8 +76,9 @@
           <div class="productsInfoBottomBox">
             <div class="container">
               <aside>
+                <button class="sideBtn">Product Finder</button>
                 <div class="sideBox">
-                  <button class="title" disabled=""><span>Product Finder</span></button>
+                  <div class="title"><span>Product Finder</span></div>
                   <form class="contentBox">
                     <div class="item">
                       <button class="subTitle" type="button">安裝方式</button>
@@ -197,6 +198,9 @@
         // $(this).parent('.item').siblings().removeClass('active');
         // $(this).parent('.item').siblings().find('ul').off().slideUp('fast')
       })
+    })
+    $('aside .sideBtn').on('click', function() {
+      $(this).parent('aside').toggleClass('active');
     })
     lightBox('.tableBtn');
   </script>

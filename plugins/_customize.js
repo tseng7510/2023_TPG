@@ -91,6 +91,7 @@ function lightBox(elm) {
 
 $(window).on('load resize', function () {
   let windowWidth = $(window).outerWidth();
+  $('.menuSearch .formBox').attr('style', '');
   $('aside .contentBox').attr('style', '');
   if (windowWidth < 1000) {
     $('aside .title').prop('disabled', false);
@@ -103,4 +104,10 @@ $(window).on('load resize', function () {
     $('aside .title').prop('disabled', true);
     $('aside .contentBox').attr('style', '');
   }
+});
+
+$(function () {
+  $('.menuSearch .titleBtn').on('click', () => {
+    $('.menuSearch .formBox').slideToggle('fast');
+  });
 });

@@ -118,39 +118,6 @@ $screen-md-max: ($screen-lg-min - 1) !default;
 //滑過背景
 //滑過color
 //滑過border
-@mixin moreComponents($moreFontSize, $moreFontColor, $moreBgColor, $moreBorder, $moreHoverBgColor, $moreHoverFontColor, $moreHoverBorder: $mainColor 1px solid) {
-  color: $moreFontColor;
-  font-weight: 300;
-  font-size: rem($moreFontSize);
-  padding: 7px 10px 5px;
-  z-index: 0;
-  text-align: center;
-  display: block;
-  position: relative;
-  background: $moreBgColor;
-  border: $moreBorder;
-  cursor: pointer;
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    display: block;
-    background: $moreHoverBgColor;
-    @include transition(all, 0.3);
-  }
-  &:hover {
-    color: $moreHoverFontColor;
-    border: $moreHoverBorder;
-    &::before {
-      width: 100%;
-      left: 0;
-    }
-  }
-}
 
 @mixin innerPage {
   position: relative;

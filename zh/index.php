@@ -99,50 +99,6 @@
           </div>
         </section>
 
-        <section class="indexSearch">
-          <div class="container">
-            <div class="searchBoxOut yoo fadeInUp" data-yoo-delay="0.2">
-              <div class="searchBox">
-                <div class="title">產品名稱搜尋</div>
-                <form action="" class="formBox">
-                  <div class="inputItem">
-                    <input type="text" name="" id="" class="inputControl">
-                  </div>
-                  <button type="submit">Search</button>
-                </form>
-                <div class="title">點擊這裡進行減速機選擇</div>
-                <form action="" class="formBox">
-                  <div class="inputItem full">
-                    <label for=""><span>產品類型</span>
-                      <div class="select">
-                        <select class="selectControl">
-                          <option value="">--</option>
-                          <option value="">產品類型</option>
-                        </select>
-                      </div>
-                    </label>
-                    <label for=""><span>電機功率 </span>
-                      <div class="select">
-                        <select class="selectControl">
-                          <option value="">--</option>
-                        </select>
-                      </div>
-                    </label>
-                    <label for=""><span>減速比</span>
-                      <div class="select">
-                        <select class="selectControl">
-                          <option value="">--</option>
-                        </select>
-                      </div>
-                    </label>
-                  </div>
-                  <button type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section class="productsBox">
           <div class="container">
             <h2 class="unitTitle">PRODUCTS <span>CATEGORY</span></h2>

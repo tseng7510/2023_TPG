@@ -63,8 +63,8 @@
       // background: $secColor;
       @include screen('mobile') {
         order: -1;
-        width: 200px;
-        margin: 0 0 0px -50px;
+        width: 90px;
+        margin: 0 0 0px -20px;
       }
       img {
         width: 100%;
@@ -93,15 +93,15 @@
     letter-spacing: 5px;
     text-indent: 5px;
     padding: 5% 0;
-    font-size: rem(32);
+    font-size: $fz32;
     color: $mainColor;
     font-weight: 500;
     border-top: 5px solid $mainColor;
     @include screen('tablet') {
-      font-size: rem(26);
+      font-size: $fz26;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
     }
   }
 
@@ -166,7 +166,7 @@
         content: 'VIEW MORE';
         display: block;
         background: $secColor;
-        font-size: rem(15);
+        font-size: $fz15;
         text-align: center;
         font-weight: 500;
         padding: 10px 5px 8px;
@@ -175,7 +175,7 @@
     }
     .title {
       color: #000;
-      font-size: rem(28);
+      font-size: $fz28;
       font-weight: 700;
       display: block;
       line-height: 1;
@@ -190,10 +190,10 @@
       text-indent: 2px;
       @include transition(all, 0.3);
       @include screen('tablet') {
-        font-size: rem(24);
+        font-size: $fz24;
       }
       @include screen('mobile') {
-        font-size: rem(20);
+        font-size: $fz20;
       }
     }
   }

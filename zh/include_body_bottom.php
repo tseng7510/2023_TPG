@@ -1,4 +1,4 @@
-<div class="privacyBox">This site uses cookies to improve your browsing experience. we'll assume you're OK to continue. If you want to read more about this, please chick <a target="_blank" href="disclaimer.php"> PRIVACY </a> thank you.<div class="closePrivacy">I Agree</div>
+<div class="privacyBox">我們將使用cookie等資訊來優化您的體驗，按下同意或繼續瀏覽即表示您同意我們使用。欲瞭解詳細內容，請詳閱 <a target="_blank" href="disclaimer.php"> 隱私權保護政策 </a> 謝謝。<div class="closePrivacy">我同意</div>
 </div>
 <div class="floatNav">
   <a href="#" target="_blank" class="line"></a>

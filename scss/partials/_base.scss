@@ -116,7 +116,7 @@ textarea {
 .select {
   position: relative;
   padding: 0 5px;
-  font-size: rem(20);
+  font-size: $fz20;
   color: #000;
   font-weight: 600;
 
@@ -181,7 +181,7 @@ button {
   text-align: center;
 
   a {
-    color: $importantColor;
+    color: $secColor;
   }
 
   .closePrivacy {

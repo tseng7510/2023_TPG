@@ -55,15 +55,11 @@
                       <input type="text" class="inputControl" id="name" required>
                     </li>
                     <li class="inputItem full yoo fadeInUp required">
-                      <label for="address">國家</label>
-                      <input type="text" class="inputControl" id="title" required>
-                    </li>
-                    <li class="inputItem full yoo fadeInUp required">
-                      <label for="name">姓名</label>
+                      <label for="name">聯絡姓名</label>
                       <input type="text" class="inputControl" id="name" required>
                     </li>
                     <li class="inputItem full yoo fadeInUp">
-                      <label for="tel">連絡電話</label>
+                      <label for="tel">聯絡電話</label>
                       <input type="text" class="inputControl" id="tel" required>
                     </li>
                     <li class="inputItem full yoo fadeInUp required">
@@ -71,7 +67,7 @@
                       <input type="text" class="inputControl" id="email" required>
                     </li>
                     <li class="inputItem full yoo fadeInUp">
-                      <label for="message">問題</label>
+                      <label for="message">訊息內容</label>
                       <textarea class="textareaControl" name="message" id="message" cols="30" rows="5"></textarea>
                     </li>
 

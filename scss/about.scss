@@ -15,16 +15,16 @@
   }
   & > .title {
     width: 25%;
-    font-size: rem(28);
+    font-size: $fz28;
     font-weight: 600;
     letter-spacing: 2px;
     padding: 0 20px 0 0;
     @include screen('tablet') {
-      font-size: rem(24);
+      font-size: $fz24;
     }
     @include screen('mobile') {
       width: 100%;
-      font-size: rem(20);
+      font-size: $fz20;
       padding: 0;
       margin: 0 0 10px;
     }
@@ -40,10 +40,10 @@
       color: #444444;
       line-height: 1.8;
       letter-spacing: 1px;
-      font-size: rem(18);
+      font-size: $fz18;
       margin: 0 0 7%;
       @include screen('mobile') {
-        font-size: rem(16);
+        font-size: $fz16;
       }
     }
     ul {
@@ -89,13 +89,13 @@
         }
         .title {
           text-align: center;
-          font-size: rem(24);
+          font-size: $fz24;
           white-space: nowrap;
           @include screen('tablet') {
-            font-size: rem(20);
+            font-size: $fz20;
           }
           @include screen('mobile') {
-            font-size: rem(18);
+            font-size: $fz18;
           }
           .en {
             font-weight: 800;
@@ -135,11 +135,11 @@
     position: relative;
     z-index: 5;
     @include screen('tablet') {
-      font-size: rem(100);
+      font-size: $fz100;
       padding: 0 10px 0 0;
     }
     @include screen('mobile') {
-      font-size: rem(60);
+      font-size: $fz60;
       margin: 0 0 -30px;
     }
   }
@@ -197,19 +197,19 @@
     }
   }
   .subTitle {
-    font-size: rem(72);
+    font-size: $fz72;
     font-weight: 600;
     color: #fff;
     line-height: 1;
     margin: 0 0 20px;
     @include screen('tablet') {
-      font-size: rem(60);
+      font-size: $fz60;
     }
     @include screen('mobile') {
-      font-size: rem(48);
+      font-size: $fz48;
     }
     @include screen('xs_mobile') {
-      font-size: rem(36);
+      font-size: $fz36;
     }
   }
   ul {
@@ -233,10 +233,10 @@
         padding: 0;
         background: none;
         color: #fff;
-        font-size: rem(18);
+        font-size: $fz18;
         text-align: left;
         @include screen('mobile') {
-          font-size: rem(16);
+          font-size: $fz16;
         }
       }
       &.active {
@@ -280,21 +280,21 @@
       letter-spacing: 5px;
       text-indent: 5px;
       margin: 0 0 5%;
-      font-size: rem(28);
+      font-size: $fz28;
       @include screen('tablet') {
-        font-size: rem(24);
+        font-size: $fz24;
       }
       @include screen('mobile') {
-        font-size: rem(20);
+        font-size: $fz20;
       }
     }
     .description {
-      font-size: rem(18);
+      font-size: $fz18;
       color: #444444;
       line-height: 1.8;
       letter-spacing: 1px;
       @include screen('mobile') {
-        font-size: rem(16);
+        font-size: $fz16;
       }
     }
   }
@@ -348,16 +348,16 @@
     padding: 0 0 36px;
     line-height: 1;
     color: $mainColor;
-    font-size: rem(72);
+    font-size: $fz72;
     position: relative;
     @include screen('tablet') {
-      font-size: rem(60);
+      font-size: $fz60;
     }
     @include screen('mobile') {
-      font-size: rem(48);
+      font-size: $fz48;
     }
     @include screen('xs_mobile') {
-      font-size: rem(36);
+      font-size: $fz36;
     }
     &::before {
       content: '';
@@ -374,21 +374,21 @@
     font-weight: 500;
     letter-spacing: 5px;
     margin: 0 0 5%;
-    font-size: rem(28);
+    font-size: $fz28;
     @include screen('tablet') {
-      font-size: rem(24);
+      font-size: $fz24;
     }
     @include screen('mobile') {
-      font-size: rem(20);
+      font-size: $fz20;
     }
   }
   .description {
-    font-size: rem(18);
+    font-size: $fz18;
     color: #444444;
     line-height: 1.8;
     letter-spacing: 1px;
     @include screen('mobile') {
-      font-size: rem(16);
+      font-size: $fz16;
     }
   }
   .pic {

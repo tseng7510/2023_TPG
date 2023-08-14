@@ -59,8 +59,6 @@
       </div>
       <div class="footerInfo yoo fadeInRight">
         <div class="logoBox"><img src="../images/footer_logo.png" alt=""></div>
-        <div class="email"><a href="mailto:tpg@tpg.com.tw">Email tpg@tpg.com.tw</a></div>
-        <div class="address">台中市豐原區水源路473巷8號</div>
       </div>
 
     </div>

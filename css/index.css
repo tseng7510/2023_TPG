@@ -38,7 +38,7 @@ section + section {
 }
 
 .unitTitle {
-  font-size: 2.6875rem;
+  font-size: 2.687rem;
   font-weight: 800;
   color: #000;
   position: relative;
@@ -177,7 +177,7 @@ section + section {
   border: 1px solid #002e84;
   color: #fff;
   height: 45px;
-  font-size: 0.8125rem;
+  font-size: 0.812rem;
 }
 @media screen and (max-width: 767px) {
   .banner .item .infoBox .more {
@@ -376,7 +376,7 @@ section + section {
   }
 }
 .aboutBox .topBox .title span {
-  font-size: 3.1875rem;
+  font-size: 3.125rem;
   font-weight: 800;
   position: relative;
   display: block;
@@ -1297,7 +1297,7 @@ section + section {
   line-height: 1;
 }
 .newsBox .infoBox time .date {
-  font-size: 0.8125rem;
+  font-size: 0.812rem;
 }
 .newsBox .infoBox .title {
   color: #fff;

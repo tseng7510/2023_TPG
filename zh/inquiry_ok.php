@@ -38,7 +38,6 @@
         </div>
       </div>
 
-
       <div class="mainBox">
         <div class="contactOk">
           <div class="container">
@@ -46,10 +45,10 @@
               <h2 class="title">THANK YOU<br />
                 FOR YOUR INQUIRY</h2>
               <div class="info">
-                <span class="fz36">INQUIRY HAS BEEN SUCCESSFUL!</span>
-                Thank you for your inquiry<br />
-                Have any questions, please use the <a href="contact.php">contact us</a> messages.<br />
-                Once we receive your message, we will contact you as soon as possible.
+                <span class="fz36">您已成功送出詢價</span>
+                感謝您的詢問<br />
+                如有任何疑問，請使用<a href="contact.php">聯繫我們</a>。<br />
+                一旦我們收到您的留言，我們將盡快與您聯繫。
               </div>
             </div>
           </div>

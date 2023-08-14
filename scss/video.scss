@@ -66,16 +66,16 @@
     max-width: 610px;
     margin: 0 0 0 auto;
     position: relative;
-    font-size: rem(21);
+    font-size: $fz21;
     font-weight: 400;
     padding: 0;
     color: #000;
     @include transition(all, 0.3);
     @include screen('tablet') {
-      font-size: rem(22);
+      font-size: $fz22;
     }
     @include screen('mobile') {
-      font-size: rem(18);
+      font-size: $fz18;
     }
   }
 }

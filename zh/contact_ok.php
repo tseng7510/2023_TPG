@@ -13,11 +13,11 @@
       <?php include('include_top.php'); ?>
     </header>
 
-    <main class="siteMain innerPage inquiryBox" aria-label="main" itemscope>
+    <main class="siteMain innerPage contactBox" aria-label="main" itemscope>
       <div class="innerBanner">
-        <div class="pic" style="background-image: url('../images/in/banner_inquiry.jpg');"></div>
+        <div class="pic" style="background-image: url('../images/in/banner_contact.jpg');"></div>
         <div class="unitTitleBox">
-          <h2 class="title yoo fadeInUp" data-yoo-delay="0s">INQUIRY CART</h2>
+          <h2 class="title yoo fadeInUp" data-yoo-delay="0s">CONTACT</h2>
         </div>
       </div>
 
@@ -49,10 +49,10 @@
               <h2 class="title">THANK YOU<br />
                 FOR YOUR MESSAGE</h2>
               <div class="info">
-                <span class="fz36">MESSAGE HAS BEEN SUCCESSFUL!</span>
-                Thank you for your message<br />
-                Have any questions, please use the <a href="contact.php">contact us</a> messages.<br />
-                Once we receive your message, we will contact you as soon as possible.
+                <span class="fz36">您已成功送出訊息</span>
+                感謝您的建議與疑問！<br />
+                收到您的留言後，我們會在最快的時間內儘速處理您的需求。<br />
+                若有需即時回覆處理問題，請聯絡我們，謝謝您！
               </div>
             </div>
           </div>

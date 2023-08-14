@@ -64,7 +64,7 @@
       &::after {
         content: 'VIEW MORE';
         display: block;
-        font-size: rem(15);
+        font-size: $fz15;
         text-align: center;
         padding: 10px 5px 8px;
         font-weight: 700;
@@ -82,7 +82,7 @@
     }
     .title {
       color: #000;
-      font-size: rem(24);
+      font-size: $fz24;
       font-weight: 700;
       overflow: hidden;
       display: -webkit-box;
@@ -94,13 +94,13 @@
         margin-bottom: 10px;
       }
       @include screen('mobile') {
-        font-size: rem(20);
+        font-size: $fz20;
       }
     }
     .description {
       color: #000;
       font-weight: 300;
-      font-size: rem(16);
+      font-size: $fz16;
       max-height: 80px;
       line-height: 1.7;
       overflow: hidden;
@@ -137,7 +137,7 @@
     time {
       color: #f9bb00;
       font-weight: 700;
-      font-size: rem(14);
+      font-size: $fz14;
       display: block;
       margin: 0 0 20px;
       width: 45%;
@@ -157,12 +157,12 @@
     .description {
       padding: 0 30px 0 0;
       color: #545454;
-      font-size: rem(16);
+      font-size: $fz16;
       line-height: 1.8;
       letter-spacing: 1px;
       font-weight: 300;
       @include screen('tablet') {
-        font-size: rem(16);
+        font-size: $fz16;
         padding: 0;
       }
     }

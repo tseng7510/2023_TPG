@@ -69,7 +69,6 @@
           <div class="container">
             <h1 class="pageTitle yoo fadeInUp" data-yoo-delay="0s">平行軸減速機</h1>
             <div class="description yoo fadeInUp" data-yoo-delay="0.2s">平行軸減速機是一種相對精密的機械特別是螺旋齒輪其採用目的是低噪音化以及高強度化，令平行軸減速機成為目前最被廣泛使用的減速機機構。</div>
-            <div class="productSearch">產品快速搜尋</div>
           </div>
         </div>
 
