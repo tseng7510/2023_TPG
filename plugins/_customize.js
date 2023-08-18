@@ -111,3 +111,15 @@ $(function () {
     $('.menuSearch .formBox').slideToggle('fast');
   });
 });
+
+$(function () {
+  $('aside .subTitle').on('click', function () {
+    $(this).parent('.item').toggleClass('active');
+    $(this).siblings('ul').off().slideToggle('fast');
+    $(this).parent('.item').siblings().removeClass('active');
+    $(this).parent('.item').siblings().find('ul').off().slideUp('fast');
+  });
+  $('aside .sideBtn').on('click', function () {
+    $(this).parent('aside').toggleClass('active');
+  });
+});
