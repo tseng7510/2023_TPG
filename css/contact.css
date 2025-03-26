@@ -13,7 +13,7 @@
 }
 .contactBox .content::before,
 .inquiryBox .content::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0 calc(50% + 40px) 0 0;
   display: block;
@@ -62,9 +62,22 @@
     width: 100%;
   }
 }
+.inquiryBox .formBox .inputItem .checkList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.inquiryBox .formBox .inputItem .checkList input {
+  box-shadow: none;
+}
+.inquiryBox .formBox .inputItem .checkList label {
+  display: flex;
+  gap: 5px;
+  white-space: nowrap;
+}
 
 .contactBox .content::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0 0 0 0;
   display: block;
@@ -95,6 +108,10 @@
     padding: 30px 20px 5%;
   }
 }
+.contactBox .content .formBox .country {
+  border: none;
+  background: none;
+}
 .contactBox .content .mapBox {
   flex-grow: 1;
   max-width: 1000px;
@@ -120,7 +137,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .globalBox .bottomListBox,
@@ -130,7 +147,7 @@
 }
 .globalBox .bottomListBox::before,
 .globalBox .topListBox::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   width: 1px;
@@ -179,7 +196,7 @@
   position: relative;
 }
 .globalBox .centerListBox::before {
-  content: "";
+  content: '';
   position: absolute;
   min-height: 100px;
   top: 0;
@@ -283,22 +300,22 @@
     font-size: 1rem;
   }
 }
-.globalBox .title {
+.globalBox .mainBox .title {
   font-size: 1.75rem;
   font-weight: 600;
   margin: 0 0 10px;
 }
 @media screen and (max-width: 1000px) {
-  .globalBox .title {
+  .globalBox .mainBox .title {
     font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .globalBox .title {
+  .globalBox .mainBox .title {
     font-size: 1.25rem;
   }
 }
-.globalBox .title span {
+.globalBox .mainBox .title span {
   color: #002e84;
   display: block;
 }
@@ -354,7 +371,7 @@
   }
 }
 .globalBox .web::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   right: 0;
@@ -515,7 +532,7 @@
   transition: all 0.3s ease;
 }
 .inquiryBox .qtyBox button:before {
-  content: "";
+  content: '';
   height: 0;
   width: 0;
   position: absolute;
@@ -526,7 +543,7 @@
   transition: all 0.3s ease;
 }
 .inquiryBox .qtyBox button:after {
-  content: "";
+  content: '';
   line-height: 1;
   top: 50%;
   left: 50%;
@@ -539,15 +556,15 @@
   transition: all 0.3s ease;
 }
 .inquiryBox .qtyBox button.add:after {
-  -webkit-mask: url("../images/icon/icon_minus.svg") no-repeat;
-          mask: url("../images/icon/icon_minus.svg") no-repeat;
+  -webkit-mask: url('../images/icon/icon_minus.svg') no-repeat;
+  mask: url('../images/icon/icon_minus.svg') no-repeat;
 }
 .inquiryBox .qtyBox button.less {
   padding-top: 0px;
 }
 .inquiryBox .qtyBox button.less:after {
-  -webkit-mask: url("../images/icon/icon_plus.svg") no-repeat;
-          mask: url("../images/icon/icon_plus.svg") no-repeat;
+  -webkit-mask: url('../images/icon/icon_plus.svg') no-repeat;
+  mask: url('../images/icon/icon_plus.svg') no-repeat;
 }
 .inquiryBox .qtyBox button:hover:before {
   height: 100%;
@@ -576,7 +593,7 @@
   }
 }
 .inquiryBox .del:before {
-  content: "";
+  content: '';
   height: 0;
   width: 0;
   position: absolute;
@@ -587,7 +604,7 @@
   transition: all 0.3s ease;
 }
 .inquiryBox .del:after {
-  content: "\e80b";
+  content: '\e80b';
   line-height: 0;
   font-size: 14px;
   height: 15px;
@@ -600,7 +617,7 @@
 }
 @media screen and (max-width: 767px) {
   .inquiryBox .del:after {
-    content: "Delete";
+    content: 'Delete';
     color: #fff;
     position: relative;
     top: auto;
@@ -650,7 +667,7 @@
   z-index: 1;
 }
 .contactOk .txt .info::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 1px;
@@ -681,16 +698,18 @@
 .contactOk .txt .info a:hover {
   color: #002e84;
 }
-
-.formBox .inputItem {
+.contactBox .formBox .inputItem {
   border-bottom: 1px solid #dddddd;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.formBox .inputItem > label {
+.contactBox .formBox .inputItem > label {
   align-items: flex-start;
   border-right: 1px solid #ddd;
+  margin-bottom: 10px;
 }
-.formBox .inputItem select.selectControl,
-.formBox .inputItem input.inputControl,
-.formBox .inputItem textarea.textareaControl {
+.contactBox .formBox .inputItem select.selectControl,
+.contactBox .formBox .inputItem input.inputControl,
+.contactBox .formBox .inputItem textarea.textareaControl {
   border: none;
-}/*# sourceMappingURL=contact.css.map */
+} /*# sourceMappingURL=contact.css.map */

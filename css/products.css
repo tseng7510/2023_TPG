@@ -507,15 +507,17 @@
   line-height: 2;
   display: none;
   position: absolute;
-  width: 35px;
-  left: 100%;
-  top: 10px;
-  writing-mode: vertical-lr;
+  height: 35px;
+  right: 0%;
+  top: 80px;
+  color:#000;
   background: #fdd100;
-  padding: 10px 0px;
-  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  padding:0 10px;
+  border-radius: 5px 5px 0 0;
   cursor: pointer;
   box-shadow: 0 3px 5px 1px rgba(0, 0, 0, 0.15);
+      transform: rotate(90deg) translateY(-78px);
   z-index: -1;
 }
 @media screen and (max-width: 1000px) {

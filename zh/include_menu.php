@@ -29,7 +29,7 @@
           <li><a href="news.php">最新消息</a></li>
           <li><a href="news.php">展覽消息</a></li>
           <li><a href="catalog.php">電子型錄</a></li>
-          <li><a href="video.php">影片觀賞</a></li>
+          <li><a href="video.php">影片</a></li>
         </ul>
       </div>
     </li>
@@ -46,6 +46,7 @@
         <ul>
           <li><a href="about.php">公司介紹</a></li>
           <li><a href="milestone.php">歷史沿革</a></li>
+          <li><a href="#">品質保證</a></li>
         </ul>
       </div>
     </li>

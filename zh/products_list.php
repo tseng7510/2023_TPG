@@ -85,11 +85,11 @@
                       <tr>
                         <th>產品型號</th>
                         <th>出力軸軸徑</th>
+                        <th>出力軸孔徑</th>
                         <th>馬力</th>
                         <th>減速比</th>
-                        <th>相數</th>
-                        <th>煞車類型</th>
-                        <th>重量(公斤)</th>
+                        <th>輸出扭距</th>
+                        <th>輸出轉速</th>
                       </tr>
                     </thead>
                     <tbody>

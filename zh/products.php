@@ -82,7 +82,7 @@
                     <a href="products_list.php">
                       <div class="pic"><img src="../images/in/products.jpg" alt=""></div>
                       <div class="info">
-                        <div class="title">齒輪減速機</div>
+                        <h2 class="title">齒輪減速機</h2>
                       </div>
                     </a>
                   </div>

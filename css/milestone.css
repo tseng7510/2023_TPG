@@ -2,7 +2,7 @@
   position: relative;
 }
 .infoBox::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   height: 1px;
@@ -23,6 +23,7 @@
   padding: 0 0 0 20px;
   margin: 0 0 0 auto;
   display: flex;
+  box-sizing: border-box;
 }
 @media screen and (max-width: 767px) {
   .infoBox .container {
@@ -56,7 +57,7 @@
   }
 }
 .activeBox::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 47px;
   top: 37px;
@@ -68,6 +69,15 @@
 }
 .activeBox .item {
   overflow: hidden;
+  height: 500px;
+}
+.activeBox .item .pic {
+  height: 100%;
+}
+.activeBox .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .activeBox .info {
   position: absolute;
@@ -154,7 +164,7 @@
   }
 }
 .otherBox::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -187,7 +197,7 @@
   }
 }
 .otherBox .controlBox::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 50%;
   width: 1px;
@@ -202,10 +212,10 @@
   z-index: 9;
 }
 .otherBox .controlBox .slick-arrow::before {
-  content: "";
+  content: '';
   display: block;
-  -webkit-mask: url("../images/icon/icon_arrow.svg") center no-repeat;
-          mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+  -webkit-mask: url('../images/icon/icon_arrow.svg') center no-repeat;
+  mask: url('../images/icon/icon_arrow.svg') center no-repeat;
   width: 19px;
   height: 41px;
   background: #002e84;
@@ -241,7 +251,7 @@
   position: relative;
 }
 .otherBox .item::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -20px;
   display: block;
@@ -252,7 +262,7 @@
   top: 65px;
 }
 .otherBox .item::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 5px;
   top: 5px;
@@ -290,4 +300,4 @@
   .otherBox .description {
     font-size: 1rem;
   }
-}/*# sourceMappingURL=milestone.css.map */
+} /*# sourceMappingURL=milestone.css.map */

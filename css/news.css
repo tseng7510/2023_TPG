@@ -26,7 +26,7 @@
     width: 100%;
   }
 }
-.newsListBox .listBox .item:nth-child(3n+2) {
+.newsListBox .listBox .item:nth-child(3n + 2) {
   margin: 0 -1px -1px;
 }
 .newsListBox .listBox .item a {
@@ -50,6 +50,7 @@
   opacity: 1;
 }
 .newsListBox .listBox .pic {
+  width: 100%;
   aspect-ratio: 4/2.7;
   margin: 0 auto 15px;
 }
@@ -57,13 +58,13 @@
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .newsListBox .listBox .infoBox {
   padding: 0 10px;
 }
 .newsListBox .listBox .infoBox::after {
-  content: "VIEW MORE";
+  content: 'VIEW MORE';
   display: block;
   font-size: 0.937rem;
   text-align: center;
@@ -118,7 +119,7 @@
   position: relative;
 }
 .newsDetailBox .container:after {
-  content: "";
+  content: '';
   display: block;
   clear: both;
 }
@@ -193,6 +194,11 @@
 }
 .newsDetailBox .newsPic .slick-slide > div {
   line-height: 0;
+  height: 100%;
+}
+.newsDetailBox .newsPic .slick-slide > div .pic,
+.newsDetailBox .newsPic .slick-slide > div .pic iframe {
+  height: 100%;
 }
 .newsDetailBox .newsPic .slick-dots {
   display: flex;
@@ -211,7 +217,7 @@
   border: none;
   background: #cccccc;
   -webkit-clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
-          clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
+  clip-path: polygon(7px 0%, 100% 0%, calc(100% - 7px) 100%, 0% 100%);
 }
 @media screen and (max-width: 1000px) {
   .newsDetailBox .newsPic .slick-dots li button {
@@ -221,4 +227,4 @@
 .newsDetailBox .newsPic .slick-dots li.slick-active button {
   background: #fdd100;
   opacity: 1;
-}/*# sourceMappingURL=news.css.map */
+} /*# sourceMappingURL=news.css.map */

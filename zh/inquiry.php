@@ -67,6 +67,16 @@
                       <input type="text" class="inputControl" id="email" required>
                     </li>
                     <li class="inputItem full yoo fadeInUp">
+                      <div class="title">配件</div>
+                      <div class="checkList">
+                        <label><input type="checkbox" class="inputControl">㳦速器</label>
+                        <label><input type="checkbox" class="inputControl">變頻器</label>
+                        <label><input type="checkbox" class="inputControl">KB控制器</label>
+                        <label><input type="checkbox" class="inputControl">剎車器</label>
+                        <label><input type="checkbox" class="inputControl">聯軸器</label>
+                      </div>
+                    </li>
+                    <li class="inputItem full yoo fadeInUp">
                       <label for="message">訊息內容</label>
                       <textarea class="textareaControl" name="message" id="message" cols="30" rows="5"></textarea>
                     </li>
@@ -79,7 +89,7 @@
                     </li>
                   </ul>
                   <div class="pageBtnBox yoo fadeInUp">
-                    <button class="send">確認送出</button>
+                    <button class="send" type="button" onclick="javascript:location.href='contact_ok.php'">確認送出</button>
                   </div>
                 </form>
 

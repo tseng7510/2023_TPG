@@ -36,7 +36,7 @@
               <meta itemprop="position" content="2">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
-              <span itemprop="name">影片觀賞</span>
+              <span itemprop="name">影片</span>
               <meta itemprop="position" content="3">
             </li>
           </ul>
@@ -47,7 +47,7 @@
         <div class="pageContent">
           <div class="video">
             <div class="container">
-              <h1 class="pageTitle yoo fadeInUp">影片觀賞</h1>
+              <h1 class="pageTitle yoo fadeInUp">影片</h1>
               <div class="listBox">
 
                 <? for ($i = 0; $i < 10; $i++) { ?>
@@ -55,7 +55,7 @@
                     <div class="pic">
                       <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/jTOGMdLcDJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
                     </div>
-                    <div class="title">振動馬達(V)</div>
+                    <h2 class="title">振動馬達(V)</h2>
                   </div>
                 <? } ?>
 

@@ -39,6 +39,10 @@
               <span itemprop="name">最新消息</span>
               <meta itemprop="position" content="3">
             </li>
+            <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
+              <span itemprop="name">本公司通過ISO9001：2015國際品</span>
+              <meta itemprop="position" content="4">
+            </li>
           </ul>
         </div>
       </div>

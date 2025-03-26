@@ -68,31 +68,25 @@
               </div>
               <ul>
                 <li class="technology yoo fadeInLeft" data-yoo-delay="0.6s">
-                  <a href="#">
-                    <i></i>
-                    <div class="title">
-                      <div class="en">Technology</div>
-                      <div class="zh">信賴的製品</div>
-                    </div>
-                  </a>
+                  <i></i>
+                  <div class="title">
+                    <div class="en">Technology</div>
+                    <div class="zh">信賴的製品</div>
+                  </div>
                 </li>
                 <li class="perfection yoo fadeInLeft" data-yoo-delay="0.8s">
-                  <a href="#">
-                    <i></i>
-                    <div class="title">
-                      <div class="en">Perfection</div>
-                      <div class="zh">卓越的性能</div>
-                    </div>
-                  </a>
+                  <i></i>
+                  <div class="title">
+                    <div class="en">Perfection</div>
+                    <div class="zh">卓越的性能</div>
+                  </div>
                 </li>
                 <li class="guarantee yoo fadeInLeft" data-yoo-delay="1s">
-                  <a href="#">
-                    <i></i>
-                    <div class="title">
-                      <div class="en">Guarantee</div>
-                      <div class="zh">品質的保證</div>
-                    </div>
-                  </a>
+                  <i></i>
+                  <div class="title">
+                    <div class="en">Guarantee</div>
+                    <div class="zh">品質的保證</div>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -241,6 +235,7 @@
                         </div>
                         <i><img src="../images/index/application_icon2.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -253,6 +248,7 @@
                         </div>
                         <i><img src="../images/index/application_icon3.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -265,6 +261,7 @@
                         </div>
                         <i><img src="../images/index/application_icon4.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -277,6 +274,7 @@
                         </div>
                         <i><img src="../images/index/application_icon5.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -289,6 +287,7 @@
                         </div>
                         <i><img src="../images/index/application_icon6.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -301,6 +300,7 @@
                         </div>
                         <i><img src="../images/index/application_icon7.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
                   <div class="swiper-slide">
@@ -313,6 +313,7 @@
                         </div>
                         <i><img src="../images/index/application_icon8.svg" alt=""></i>
                       </div>
+                      <a href="application.php" class="indexMore yoo fadeInLeft" data-yoo-delay="0.2s">VIEW MORE</a>
                     </div>
                   </div>
 

@@ -57,7 +57,7 @@
                       <div class="pic"><img src="../images/index/news.jpg" alt=""></div>
                       <div class="infoBox">
                         <time>2022. 10.15</time>
-                        <div class="title">本公司通過ISO9001：2015國際品質認證！</div>
+                        <h2 class="title">本公司通過ISO9001：2015國際品質認證！</h2>
                         <div class="description">在如此嚴峻的疫情下，TPG仍持續地為客戶服務且在原物料充足情況下提供最佳的品質，TPG也期待疫情可以盡快結束。...</div>
                         <div class="more"></div>
                       </div>

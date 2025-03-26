@@ -89,7 +89,7 @@
                       <div class="infoBox">
                         <div class="info">
                           <div class="title">TPG MOTORS & DRIVES (U.S.A) L.L.C.</div>
-                          <div class="address">113 Barksdale Professional Center in the City of Newark, Coutnty of New Castle, DE 19711, USA</div>
+                          <div class="address">113 Barksdale Professional Center in the City of Newark, County of New Castle, DE 19711, USA</div>
                         </div>
                         <ul>
                           <li>
@@ -267,7 +267,7 @@
                     <div class="item full">
                       <div class="local">
                         <div class="en">INDIA</div>
-                        <div class="zh">印尼</div>
+                        <div class="zh">印度</div>
                       </div>
                       <div class="infoBox">
                         <div class="info">

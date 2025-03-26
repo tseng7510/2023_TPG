@@ -3,22 +3,22 @@
 
 <head>
   <?php include('include_head.php'); ?>
-  <link rel="stylesheet" type="text/css" href="../css/faq.css">
+  <link rel="stylesheet" type="text/css" href="../css/news.css">
 </head>
 
 <body>
   <?php include('include_body_top.php'); ?>
-  <div class="wrapper technicalPage">
+  <div class="wrapper newsPage">
     <header class="siteHeader" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
       <?php include('include_top.php'); ?>
     </header>
 
 
-    <main class="siteMain innerPage faqBox" aria-label="main" itemscope>
+    <main class="siteMain innerPage newsListBox" aria-label="main" itemscope>
       <div class="innerBanner">
-        <div class="pic" style="background-image: url('../images/in/banner_blog.jpg');"></div>
+        <div class="pic" style="background-image: url('../images/in/banner_news.jpg');"></div>
         <div class="unitTitleBox">
-          <h2 class="title yoo fadeInUp" data-yoo-delay="0s">TECHNOLOGY</h2>
+          <h2 class="title yoo fadeInUp" data-yoo-delay="0s">MEDIA</h2>
         </div>
       </div>
 
@@ -32,7 +32,7 @@
               <meta itemprop="position" content="1">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
-              <span itemprop="name">技術支援</span>
+              <span itemprop="name">媒體專區</span>
               <meta itemprop="position" content="2">
             </li>
             <li itemprop="itemListElement" itemscope="" itemtype="//schema.org/ListItem">
@@ -45,24 +45,42 @@
 
       <div class="mainBox">
         <div class="pageContent">
-          <div class="faq">
+          <div class="newsList">
             <div class="container">
-              <h1 class="pageTitle yoo fadeInUp">部落格</h1>
+              <h1 class="pageTitle yoo fadeInUp">BLOG</h1>
 
-              <div class="listBox">
+              <div class="listBox yoo fadeInUp" data-yoo-delay="0.4s">
 
-                <? for ($i = 0; $i < 6; $i++) { ?>
+                <? for ($i = 0; $i < 9; $i++) { ?>
                   <div class="item">
-                    <button class="title qBox" role="button">PG阪神齒輪減速機出線盒安裝方向 <i></i></button>
-                    <div class="txtBox aBox">
-                      <div class="txt">Circular saw grinding machine can be applied on many filed, such as auto car, sports equipment, bicycle, tube manufacture, tube and other processing plant, grinding shop or others who want to increase production capacity.</div>
-                    </div>
+                    <a href="blog_detail.php">
+                      <div class="pic"><img src="../images/index/news.jpg" alt=""></div>
+                      <div class="infoBox">
+                        <time>2022. 10.15</time>
+                        <h2 class="title">本公司通過ISO9001：2015國際品質認證！</h2>
+                        <div class="description">在如此嚴峻的疫情下，TPG仍持續地為客戶服務且在原物料充足情況下提供最佳的品質，TPG也期待疫情可以盡快結束。...</div>
+                        <div class="more"></div>
+                      </div>
+                    </a>
                   </div>
                 <? } ?>
 
               </div>
-
             </div>
+          </div>
+        </div>
+
+        <div class="pageBox yoo fadeInUp" data-yoo-delay="0.2s">
+          <div class="container">
+            <ul class="pagination">
+              <li class="controls"><a class="prev" href="#" title="Previous"></a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li class="active"><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li class="controls"><a class="next" href="#" title="Next"></a></li>
+            </ul>
           </div>
         </div>
 
@@ -76,9 +94,6 @@
     <?php include('include_footer.php'); ?>
   </div>
   <?php include('include_body_bottom.php'); ?>
-  <script>
-    qa('.qBox', '.aBox')
-  </script>
 </body>
 
 </html>

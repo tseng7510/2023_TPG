@@ -45,7 +45,7 @@
         <input type="text" name="" id="" class="inputControl" placeholder="輸入型號或關鍵字">
       </div>
     </div>
-    <button type="submit" onclick="location.href='products_search_results.php'">Search</button>
+    <button type="button" onclick="javascript:location.href='products_search_results.php'">Search</button>
     <button type="reset">清除搜尋條件</button>
   </form>
 </div>

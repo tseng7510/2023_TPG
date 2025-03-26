@@ -56,19 +56,23 @@
                   <ul>
                     <li class="inputItem full yoo fadeInUp required">
                       <label for="company">公司名稱</label>
-                      <input type="text" class="inputControl" id="name" required>
+                      <input type="text" class="inputControl" id="name">
                     </li>
                     <li class="inputItem full yoo fadeInUp required">
                       <label for="name">聯絡姓名</label>
-                      <input type="text" class="inputControl" id="name" required>
+                      <input type="text" class="inputControl" id="name">
                     </li>
                     <li class="inputItem full yoo fadeInUp">
                       <label for="tel">聯絡電話</label>
-                      <input type="text" class="inputControl" id="tel" required>
+                      <input type="text" class="inputControl" id="tel">
                     </li>
                     <li class="inputItem full yoo fadeInUp required">
                       <label for="email">E-mail</label>
-                      <input type="text" class="inputControl" id="email" required>
+                      <input type="text" class="inputControl" id="email">
+                    </li>
+                    <li class="inputItem full yoo fadeInUp required">
+                      <label for="email">國家</label>
+                      <input type="text" class="inputControl" id="country">
                     </li>
                     <li class="inputItem full yoo fadeInUp">
                       <label for="message">訊息內容</label>
@@ -77,13 +81,13 @@
 
                     <li class="inputItem full yoo fadeInUp required">
                       <label for="password">驗證碼</label>
-                      <input type="password" class="inputControl" id="password" required>
+                      <input type="password" class="inputControl" id="password">
                       <span class="checkImg"><img src="../images/check_img.jpg"></span>
                       <button class="reBtn"></button>
                     </li>
                   </ul>
                   <div class="pageBtnBox yoo fadeInUp">
-                    <button class="send">確認送出</button>
+                    <button class="send" type="button" onclick="javascript:location.href='contact_ok.php'">確認送出</button>
                   </div>
                 </form>
 

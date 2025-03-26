@@ -44,6 +44,7 @@
           <ul>
             <li><a href="about.php">公司介紹</a></li>
             <li><a href="milestone.php">歷史沿革</a></li>
+            <li><a href="#">品質保證</a></li>
           </ul>
         </div>
         <div class="menu yoo fadeInRight">
